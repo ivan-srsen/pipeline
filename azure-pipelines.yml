@@ -10,9 +10,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- checkout: self  # self represents the repo where the initial Pipelines YAML file was found
-  lfs: boolean  # whether to download Git-LFS files
-  submodules: true | recursive  # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules
+- task: CmdLine@2
+  inputs:
+    script: |
+      git submodule init
+      git submodule foreach git pull origin master
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
