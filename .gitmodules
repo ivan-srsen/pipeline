@@ -1,0 +1,3 @@
+[submodule "pipelinedependency"]
+	path = pipelinedependency
+	url = https://github.com/ivan-srsen/pipelinedependency.git
