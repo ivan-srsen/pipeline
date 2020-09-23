@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pipelinedependency\ClassLibrary2\ClassLibrary2.csproj">
+      <Project>{a8e37d33-32d3-4be1-aa4e-3cb6fbd54504}</Project>
+      <Name>ClassLibrary2</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
