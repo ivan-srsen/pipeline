@@ -10,11 +10,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: CmdLine@2
-  inputs:
-    script: |
-      git submodule init
-      git submodule foreach git pull origin master
+- checkout: self
+  submodules: true
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
