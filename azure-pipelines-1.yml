@@ -36,3 +36,9 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'mkdir InstallFolder\Pinnacle'
+
+- publish: $(System.DefaultWorkingDirectory)
+  artifact: WebApp
+
+- download: current
+  artifact: WebApp
