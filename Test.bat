@@ -11,7 +11,6 @@
 @del /f InstallFolder\Pinnacle\Shared\ConfigurationFileEncrypt.bat
 @del /f InstallFolder\Pinnacle\Shared\ConfigDecrypted.cfgx
 @del /f InstallFolder\Pinnacle\Shared\Cimetrix.ConfigurationEditor.exe
-@rmdir /Q/S InstallFolder
 @echo.
 @echo.
 @echo.
