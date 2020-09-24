@@ -9,10 +9,21 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+  solution: '**/*.sln'
+  nugetConfigFile: '$(Build.SourcesDirectory)/nuget.config'
+
 steps:
 - checkout: self
   submodules: true
 
+- task: NuGetCommand@2
+  displayName: 'Restore NuGet packages'
+  inputs:
+    feedsToUse: config
+    nugetConfigPath: '$(nugetConfigFile)'
+    restoreSolution: '$(solution)'
+  
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
