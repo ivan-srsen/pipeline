@@ -13,13 +13,19 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  nugetConfigFile: '$(Build.SourcesDirectory)/nuget.config'
 
 steps:
+- checkout: self
+  submodules: true
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
+  displayName: 'Restore NuGet packages'
   inputs:
     restoreSolution: '$(solution)'
+    feedsToUse: config
+    nugetConfigPath: '$(nugetConfigFile)'
 
 - task: VSBuild@1
   inputs:
