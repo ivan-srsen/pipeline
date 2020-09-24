@@ -33,13 +33,9 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
   
-- task: CmdLine@2
+- task: BatchScript@1
   inputs:
-    script: |
-      mkdir InstallFolder\Pinnacle
-      xcopy Dependencies InstallFolder\Pinnacle\Dependencies /E /H /C /I
-      xcopy Shared InstallFolder\Pinnacle\Shared /E /H /C /I
-      xcopy EquipmentModels InstallFolder\Pinnacle\EquipmentModels  /E /H /C /I
+    filename: 'Test.bat'
 
 - publish: $(System.DefaultWorkingDirectory)
   artifact: WebApp
