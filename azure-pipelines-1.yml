@@ -35,7 +35,11 @@ steps:
   
 - task: CmdLine@2
   inputs:
-    script: 'mkdir InstallFolder\Pinnacle'
+    script: |
+      mkdir InstallFolder\Pinnacle
+      xcopy Dependencies InstallFolder\Pinnacle\Dependencies /E /H /C /I
+      xcopy Shared InstallFolder\Pinnacle\Shared /E /H /C /I
+      xcopy EquipmentModels InstallFolder\Pinnacle\EquipmentModels  /E /H /C /I
 
 - publish: $(System.DefaultWorkingDirectory)
   artifact: WebApp
