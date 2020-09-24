@@ -1,4 +1,5 @@
 ﻿using ClassLibrary2;
+using Newtonsoft.Json;
 
 namespace ConsoleApp1
 {
@@ -6,8 +7,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-
-
+            var test = new Class2{Test = "sadsdad"};
+            JsonConvert.SerializeObject(test);
             Class1.Print();
         }
     }
