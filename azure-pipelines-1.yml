@@ -27,6 +27,11 @@ steps:
     feedsToUse: config
     nugetConfigPath: '$(nugetConfigFile)'
 
+- task: ChocolateyCommand@0
+  inputs:
+    command: 'install'
+    installPackageId: 'wixtoolset'
+
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
