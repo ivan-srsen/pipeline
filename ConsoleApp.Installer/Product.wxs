@@ -32,7 +32,6 @@
 
     <Feature Id="ProductFeature" Title="ConsoleApp.Installer" Level="1">
       <ComponentGroupRef Id="ProductComponents" />
-      <ComponentGroupRef Id="PublishedComponents" />
     </Feature>
   </Product>
 </Wix>

@@ -5,7 +5,7 @@
       <ComponentRef Id="MainAppShortcut"/>
     </ComponentGroup>
 
-    <DirectoryRef Id="INSTALLFOLDER" FileSource="..\..\InstallFolder\">
+    <DirectoryRef Id="INSTALLFOLDER" FileSource="..\InstallFolder\">
       <Component Id="MainAppShortcut" Guid="{FDE58D8C-E6B6-4FC4-8E78-B193B0B7FF93}">
         <Shortcut
           Id="MainAppShortcut"

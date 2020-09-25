@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Component Id="cmpEE54553C713E47D9E02F8C10FD1B2876" Guid="{9A9BBD07-C166-46A5-8E2D-4EDC372A2C8A}">
+                <File Id="filFCAEAE4582ACBE5863EB168488035E81" KeyPath="yes" Source="$(var.BasePath)\sdasd.txt" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="PublishedComponents">
+            <ComponentRef Id="cmpEE54553C713E47D9E02F8C10FD1B2876" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>
