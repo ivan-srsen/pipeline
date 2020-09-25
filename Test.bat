@@ -17,11 +17,6 @@ echo Over and out.
 @del /f InstallFolder\Pinnacle\Shared\ConfigurationFileEncrypt.bat
 @del /f InstallFolder\Pinnacle\Shared\ConfigDecrypted.cfgx
 @del /f InstallFolder\Pinnacle\Shared\Cimetrix.ConfigurationEditor.exe
-@echo Removing extra files
-@del /f InstallFolder\Pinnacle\Shared\ConfigEditor.bat
-@del /f InstallFolder\Pinnacle\Shared\ConfigurationFileEncrypt.bat
-@del /f InstallFolder\Pinnacle\Shared\ConfigDecrypted.cfgx
-@del /f InstallFolder\Pinnacle\Shared\Cimetrix.ConfigurationEditor.exe
 @echo.
 @echo.
 @echo.
