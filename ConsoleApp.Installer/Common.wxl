@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+  <String Id="ProductName_x86">Pinnacle (32bit)</String>
+  <String Id="ProductName_x64">Pinnacle (64bit)</String>
+
+  <String Id="ProductFolderName">Pinnacle</String>
+
+  <String Id="Description">This is a description</String>
+  <String Id="Keywords">Installer</String>
+  <String Id="Comments">Some comments</String>
+
+  <String Id="Language">1033</String>
+  <String Id="Company">BTU Inc.</String>
+</WixLocalization>
