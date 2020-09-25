@@ -1,0 +1,1752 @@
+<?xml version="1.0"?>
+<configuration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="">
+  <Branches>
+    <Branch name="ECS">
+      <Parameters>
+        <Parameter name="ThroughputIntervalInSeconds" description="The interval of time in seconds between throughput updates" dynamic="true" classification="User" type="IntType" value="50" factoryDefault="50" min="1" max="3600" hidden="false" />
+      </Parameters>
+      <Branches>
+        <Branch name="InternalLoadPorts">
+          <Parameters>
+            <Parameter name="LocalCreateCarrierId" dynamic="true" type="BoolType" value="true" factoryDefault="False" hidden="false">
+              <ValidValues>
+                <Value>True</Value>
+                <Value>False</Value>
+              </ValidValues>
+              <Comment>If True user can create FIMS Carrier from Operations</Comment>
+            </Parameter>
+          </Parameters>
+          <Branches>
+            <Branch name="FIMS1">
+              <Parameters>
+                <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="FIMS1" factoryDefault="FIMS1" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                <Parameter name="GenerateCarrierId" description="Generate carrier ID in software, do not read tag" dynamic="true" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                <Parameter name="CarrierIdLength" description="Length of carrier ID to be generated" dynamic="true" classification="User" type="IntType" value="8" factoryDefault="8" min="1" max="40" hidden="false" />
+                <Parameter name="EfemStation" description="Component name compatible with the EFEM naming conventions" dynamic="false" classification="User" type="StringType" value="PORT1" factoryDefault="PORT1" hidden="true" />
+                <Parameter name="TransportLayerName" description="Name of the Transport Layer" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" />
+                <Parameter name="Port" description="IP Port" dynamic="true" classification="User" type="IntType" value="4999" factoryDefault="4999" min="1" max="65535" hidden="true" />
+                <Parameter name="Address" description="IP Address" dynamic="true" classification="User" type="StringType" value="192.168.0.249" factoryDefault="127.0.0.1" hidden="true" />
+                <Parameter name="IndicatorMode" description="Select the configuration of Status Indicators displayed on the Local LCD screen." dynamic="false" classification="User" type="StringType" value="Brooks" factoryDefault="Brooks" hidden="false">
+                  <ValidValues>
+                    <Value>AMD</Value>
+                    <Value>Brooks</Value>
+                    <Value>Chartered-Fab7</Value>
+                    <Value>Elpida</Value>
+                    <Value>Fujitsu-Mie</Value>
+                    <Value>Hynix</Value>
+                    <Value>IBM</Value>
+                    <Value>Infineon-Dresden</Value>
+                    <Value>Infineon-Richmond</Value>
+                    <Value>Inotera</Value>
+                    <Value>Intel-D1C</Value>
+                    <Value>Intel-D1D</Value>
+                    <Value>Matsushita</Value>
+                    <Value>Micron</Value>
+                    <Value>NEC</Value>
+                    <Value>PowerChip</Value>
+                    <Value>ProMos</Value>
+                    <Value>Samsung</Value>
+                    <Value>SMIC-Fab4</Value>
+                    <Value>Sony-Kumamoto</Value>
+                    <Value>Sony-Nagasaki</Value>
+                    <Value>ST-Micro</Value>
+                    <Value>TI-DMOS6</Value>
+                    <Value>Toshiba-Oita</Value>
+                    <Value>Trecenti-Renesas</Value>
+                    <Value>TSMC-12</Value>
+                    <Value>TSMC-14</Value>
+                    <Value>UMC</Value>
+                    <Value>UMCI</Value>
+                    <Value>Wacker/Siltronics</Value>
+                    <Value>Winbond-Fab6</Value>
+                    <Value>YEC</Value>
+                  </ValidValues>
+                </Parameter>
+              </Parameters>
+            </Branch>
+            <Branch name="FIMS2">
+              <Parameters>
+                <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="FIMS2" factoryDefault="FIMS2" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                <Parameter name="GenerateCarrierId" description="Generate carrier ID in software, do not read tag" dynamic="true" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                <Parameter name="CarrierIdLength" description="Length of carrier ID to be generated" dynamic="true" classification="User" type="IntType" value="8" factoryDefault="8" min="1" max="40" hidden="false" />
+                <Parameter name="EfemStation" description="Component name compatible with the EFEM naming conventions" dynamic="false" classification="User" type="StringType" value="PORT2" factoryDefault="PORT2" hidden="true" />
+                <Parameter name="TransportLayerName" description="Name of the Transport Layer" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" />
+                <Parameter name="Port" description="IP Port" dynamic="true" classification="User" type="IntType" value="4999" factoryDefault="5000" min="1" max="65535" hidden="true" />
+                <Parameter name="Address" description="IP Address" dynamic="true" classification="User" type="StringType" value="192.168.0.250" factoryDefault="127.0.0.1" hidden="true" />
+                <Parameter name="IndicatorMode" description="Select the configuration of Status Indicators displayed on the Local LCD screen." dynamic="false" classification="User" type="StringType" value="Brooks" factoryDefault="Brooks" hidden="false">
+                  <ValidValues>
+                    <Value>AMD</Value>
+                    <Value>Brooks</Value>
+                    <Value>Chartered-Fab7</Value>
+                    <Value>Elpida</Value>
+                    <Value>Fujitsu-Mie</Value>
+                    <Value>Hynix</Value>
+                    <Value>IBM</Value>
+                    <Value>Infineon-Dresden</Value>
+                    <Value>Infineon-Richmond</Value>
+                    <Value>Inotera</Value>
+                    <Value>Intel-D1C</Value>
+                    <Value>Intel-D1D</Value>
+                    <Value>Matsushita</Value>
+                    <Value>Micron</Value>
+                    <Value>NEC</Value>
+                    <Value>PowerChip</Value>
+                    <Value>ProMos</Value>
+                    <Value>Samsung</Value>
+                    <Value>SMIC-Fab4</Value>
+                    <Value>Sony-Kumamoto</Value>
+                    <Value>Sony-Nagasaki</Value>
+                    <Value>ST-Micro</Value>
+                    <Value>TI-DMOS6</Value>
+                    <Value>Toshiba-Oita</Value>
+                    <Value>Trecenti-Renesas</Value>
+                    <Value>TSMC-12</Value>
+                    <Value>TSMC-14</Value>
+                    <Value>UMC</Value>
+                    <Value>UMCI</Value>
+                    <Value>Wacker/Siltronics</Value>
+                    <Value>Winbond-Fab6</Value>
+                    <Value>YEC</Value>
+                  </ValidValues>
+                </Parameter>
+              </Parameters>
+            </Branch>
+            <Branch name="FIMS3">
+              <Parameters>
+                <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="FIMS3" factoryDefault="FIMS3" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                <Parameter name="GenerateCarrierId" description="Generate carrier ID in software, do not read tag" dynamic="true" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                <Parameter name="CarrierIdLength" description="Length of carrier ID to be generated" dynamic="true" classification="User" type="IntType" value="8" factoryDefault="8" min="1" max="40" hidden="false" />
+                <Parameter name="EfemStation" description="Component name compatible with the EFEM naming conventions" dynamic="false" classification="User" type="StringType" value="PORT3" factoryDefault="PORT3" hidden="true" />
+                <Parameter name="TransportLayerName" description="Name of the Transport Layer" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" />
+                <Parameter name="Port" description="IP Port" dynamic="true" classification="User" type="IntType" value="4999" factoryDefault="5001" min="1" max="65535" hidden="true" />
+                <Parameter name="Address" description="IP Address" dynamic="true" classification="User" type="StringType" value="192.168.0.251" factoryDefault="127.0.0.1" hidden="true" />
+                <Parameter name="IndicatorMode" description="Select the configuration of Status Indicators displayed on the Local LCD screen." dynamic="false" classification="User" type="StringType" value="Brooks" factoryDefault="Brooks" hidden="false">
+                  <ValidValues>
+                    <Value>AMD</Value>
+                    <Value>Brooks</Value>
+                    <Value>Chartered-Fab7</Value>
+                    <Value>Elpida</Value>
+                    <Value>Fujitsu-Mie</Value>
+                    <Value>Hynix</Value>
+                    <Value>IBM</Value>
+                    <Value>Infineon-Dresden</Value>
+                    <Value>Infineon-Richmond</Value>
+                    <Value>Inotera</Value>
+                    <Value>Intel-D1C</Value>
+                    <Value>Intel-D1D</Value>
+                    <Value>Matsushita</Value>
+                    <Value>Micron</Value>
+                    <Value>NEC</Value>
+                    <Value>PowerChip</Value>
+                    <Value>ProMos</Value>
+                    <Value>Samsung</Value>
+                    <Value>SMIC-Fab4</Value>
+                    <Value>Sony-Kumamoto</Value>
+                    <Value>Sony-Nagasaki</Value>
+                    <Value>ST-Micro</Value>
+                    <Value>TI-DMOS6</Value>
+                    <Value>Toshiba-Oita</Value>
+                    <Value>Trecenti-Renesas</Value>
+                    <Value>TSMC-12</Value>
+                    <Value>TSMC-14</Value>
+                    <Value>UMC</Value>
+                    <Value>UMCI</Value>
+                    <Value>Wacker/Siltronics</Value>
+                    <Value>Winbond-Fab6</Value>
+                    <Value>YEC</Value>
+                  </ValidValues>
+                </Parameter>
+              </Parameters>
+            </Branch>
+            <Branch name="FIMS4">
+              <Parameters>
+                <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="FIMS4" factoryDefault="FIMS4" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                <Parameter name="GenerateCarrierId" description="Generate carrier ID in software, do not read tag" dynamic="true" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                <Parameter name="CarrierIdLength" description="Length of carrier ID to be generated" dynamic="true" classification="User" type="IntType" value="8" factoryDefault="8" min="1" max="40" hidden="false" />
+                <Parameter name="EfemStation" description="Component name compatible with the EFEM naming conventions" dynamic="false" classification="User" type="StringType" value="PORT4" factoryDefault="PORT4" hidden="true" />
+                <Parameter name="TransportLayerName" description="Name of the Transport Layer" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" />
+                <Parameter name="Port" description="IP Port" dynamic="true" classification="User" type="IntType" value="4999" factoryDefault="5002" min="1" max="65535" hidden="true" />
+                <Parameter name="Address" description="IP Address" dynamic="true" classification="User" type="StringType" value="192.168.0.252" factoryDefault="127.0.0.1" hidden="true" />
+                <Parameter name="IndicatorMode" description="Select the configuration of Status Indicators displayed on the Local LCD screen." dynamic="false" classification="User" type="StringType" value="Brooks" factoryDefault="Brooks" hidden="false">
+                  <ValidValues>
+                    <Value>AMD</Value>
+                    <Value>Brooks</Value>
+                    <Value>Chartered-Fab7</Value>
+                    <Value>Elpida</Value>
+                    <Value>Fujitsu-Mie</Value>
+                    <Value>Hynix</Value>
+                    <Value>IBM</Value>
+                    <Value>Infineon-Dresden</Value>
+                    <Value>Infineon-Richmond</Value>
+                    <Value>Inotera</Value>
+                    <Value>Intel-D1C</Value>
+                    <Value>Intel-D1D</Value>
+                    <Value>Matsushita</Value>
+                    <Value>Micron</Value>
+                    <Value>NEC</Value>
+                    <Value>PowerChip</Value>
+                    <Value>ProMos</Value>
+                    <Value>Samsung</Value>
+                    <Value>SMIC-Fab4</Value>
+                    <Value>Sony-Kumamoto</Value>
+                    <Value>Sony-Nagasaki</Value>
+                    <Value>ST-Micro</Value>
+                    <Value>TI-DMOS6</Value>
+                    <Value>Toshiba-Oita</Value>
+                    <Value>Trecenti-Renesas</Value>
+                    <Value>TSMC-12</Value>
+                    <Value>TSMC-14</Value>
+                    <Value>UMC</Value>
+                    <Value>UMCI</Value>
+                    <Value>Wacker/Siltronics</Value>
+                    <Value>Winbond-Fab6</Value>
+                    <Value>YEC</Value>
+                  </ValidValues>
+                </Parameter>
+              </Parameters>
+            </Branch>
+          </Branches>
+        </Branch>
+        <Branch name="Apex">
+          <Branches>
+            <Branch name="ApexNode">
+              <Parameters>
+                <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="APX1" factoryDefault="APX1" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+              </Parameters>
+              <Branches>
+                <Branch name="SECSConnect">
+                  <Parameters>
+                    <Parameter name="Protocol" description="Choices are HSMS or SECS1" dynamic="false" classification="User" type="StringType" value="HSMS" factoryDefault="HSMS" hidden="false" />
+                    <Parameter name="LinkTestEnabled" description="Heart Beat to Verify Connection" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="false" hidden="false" />
+                    <Parameter name="EnableWriteToConsole" description="Write SecsConnect Messages to Supervisor Console" dynamic="true" type="BoolType" value="false" factoryDefault="false" hidden="false" />
+                    <Parameter name="SvidUpdateTimer" description="SVID Update Timer" dynamic="true" type="IntType" value="10000" factoryDefault="10000" min="10000" max="30000" unit="mSecs" hidden="false" />
+                  </Parameters>
+                  <Branches>
+                    <Branch name="HSMS">
+                      <Parameters>
+                        <Parameter name="DeviceID" description="Device ID" dynamic="true" type="StringType" value="257" factoryDefault="257" hidden="false" />
+                        <Parameter name="Protocol" description="HSMS" dynamic="true" type="StringType" value="HSMS" factoryDefault="HSMS" hidden="false" />
+                        <Parameter name="IPAddress" description="IP Address" dynamic="true" type="StringType" value="10.10.12.201" factoryDefault="127.0.0.1" hidden="false" />
+                        <Parameter name="TCPPort" description="TCP Port" dynamic="true" type="StringType" value="5501" factoryDefault="5501" hidden="false" />
+                        <Parameter name="ConnectMode" description="Connect Mode ACTIVE or PASSIVE" dynamic="true" type="StringType" value="ACTIVE" factoryDefault="ACTIVE" hidden="false" />
+                        <Parameter name="T3Timeout" description="T3 Transaction timeout mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                        <Parameter name="T5Timeout" description="T5 Connect Separation timeout mSecs" dynamic="true" type="StringType" value="5000" factoryDefault="5000" hidden="false" />
+                        <Parameter name="T6Timeout" description="T6 Control Transaction timeout mSecs" dynamic="true" type="StringType" value="5000" factoryDefault="5000" hidden="false" />
+                        <Parameter name="T7Timeout" description="T7 Not Selected timeout mSecs" dynamic="true" type="StringType" value="10000" factoryDefault="10000" hidden="false" />
+                        <Parameter name="T8Timeout" description="T8 Network inter-character timeout mSecs" dynamic="true" type="StringType" value="5000" factoryDefault="5000" hidden="false" />
+                        <Parameter name="Role" description="HOST or EQUIPMENT" dynamic="true" type="StringType" value="EQUIPMENT" factoryDefault="EQUIPMENT" hidden="false" />
+                        <Parameter name="LinkTestTimer" description="Used to verify Connection mSecs" dynamic="false" type="StringType" value="60000" factoryDefault="60000" hidden="false" />
+                        <Parameter name="GemEnabled" description="Enable GEM Messaging" dynamic="false" type="BoolType" value="true" factoryDefault="false" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="SECS1">
+                      <Parameters>
+                        <Parameter name="DeviceID" description="Device ID" dynamic="true" type="StringType" value="257" factoryDefault="257" hidden="false" />
+                        <Parameter name="Protocol" description="SECS1" dynamic="true" type="StringType" value="SECS1" factoryDefault="SECS1" hidden="false" />
+                        <Parameter name="ComPort" description="Apex COM Port" dynamic="true" type="StringType" value="COM50 " factoryDefault="COM50" hidden="false" />
+                        <Parameter name="BaudRate" description="Baud Rate Note: Connection to DDC is Hardcoded at 9600" dynamic="true" type="StringType" value="9600" factoryDefault="9600" hidden="false" />
+                        <Parameter name="T1Timeout" description="T1 Timeout in mSecs" dynamic="true" type="StringType" value="500" factoryDefault="500" hidden="false" />
+                        <Parameter name="T2Timeout" description="T2 Timeout in mSecs" dynamic="true" type="StringType" value="5000" factoryDefault="5000" hidden="false" />
+                        <Parameter name="T3Timeout" description="T3 Timeout in mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                        <Parameter name="T4Timeout" description="T4 Timeout in mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                        <Parameter name="Retry" description="Max Retries before error" dynamic="true" type="StringType" value="3" factoryDefault="3" hidden="false" />
+                        <Parameter name="Role" description="HOST or EQUIPMENT" dynamic="true" type="StringType" value="EQUIPMENT" factoryDefault="EQUIPMENT" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                  </Branches>
+                </Branch>
+                <Branch name="Furnaces">
+                  <Branches>
+                    <Branch name="Furnace1">
+                      <Branches>
+                        <Branch name="Tube1">
+                          <Parameters>
+                            <Parameter name="Name" description="Name of the component" dynamic="true" classification="User" type="StringType" value="TUBE1" factoryDefault="TUBE1" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                            <Parameter name="Present" description="Component is installed" dynamic="true" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                          </Parameters>
+                          <Branches>
+                            <Branch name="SECSConnect">
+                              <Parameters>
+                                <Parameter name="Protocol" description="Choices HSMS or SECS1" dynamic="false" classification="User" type="StringType" value="HSMS" factoryDefault="HSMS" hidden="false" />
+                              </Parameters>
+                              <Branches>
+                                <Branch name="HSMS">
+                                  <Parameters>
+                                    <Parameter name="DeviceID" description="Device ID" dynamic="true" type="StringType" value="3329" factoryDefault="3329" hidden="false" />
+                                  </Parameters>
+                                </Branch>
+                                <Branch name="SECS1">
+                                  <Parameters>
+                                    <Parameter name="DeviceID" description="Device ID" dynamic="true" type="StringType" value="3329" factoryDefault="3329" hidden="false" />
+                                    <Parameter name="Protocol" description="SECS1" dynamic="false" type="StringType" value="SECS1" factoryDefault="SECS1" hidden="false" />
+                                    <Parameter name="ComPort" description="Apex COM Port" dynamic="true" type="StringType" value="COM50" factoryDefault="COM50" hidden="false" />
+                                    <Parameter name="BaudRate" description="Baud Rate Note: Connection to DDC is Hardcoded at 9600" dynamic="true" type="StringType" value="9600" factoryDefault="9600" hidden="false" />
+                                    <Parameter name="T1Timeout" description="T1 Timeout in mSecs" dynamic="true" type="StringType" value="500" factoryDefault="500" hidden="false" />
+                                    <Parameter name="T2Timeout" description="T2 Timeout in mSecs" dynamic="true" type="StringType" value="5000" factoryDefault="5000" hidden="false" />
+                                    <Parameter name="T3Timeout" description="T3 Timeout in mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                                    <Parameter name="T4Timeout" description="T4 Timeout in mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                                    <Parameter name="Retry" description="Max Retries before error" dynamic="true" type="StringType" value="3" factoryDefault="3" hidden="false" />
+                                    <Parameter name="Role" description="HOST or EQUIPMENT" dynamic="true" type="StringType" value="EQUIPMENT" factoryDefault="EQUIPMENT" hidden="false" />
+                                  </Parameters>
+                                </Branch>
+                              </Branches>
+                            </Branch>
+                          </Branches>
+                        </Branch>
+                        <Branch name="Tube2">
+                          <Parameters>
+                            <Parameter name="Name" description="Name of the component" dynamic="true" classification="User" type="StringType" value="TUBE2" factoryDefault="TUBE2" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                            <Parameter name="Present" description="Component is installed" dynamic="true" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                          </Parameters>
+                          <Branches>
+                            <Branch name="SECSConnect">
+                              <Parameters>
+                                <Parameter name="Protocol" description="Choices are HSMS or SECS1" dynamic="false" classification="User" type="StringType" value="HSMS" factoryDefault="HSMS" hidden="false" />
+                              </Parameters>
+                              <Branches>
+                                <Branch name="HSMS">
+                                  <Parameters>
+                                    <Parameter name="DeviceID" description="Device ID" dynamic="true" type="StringType" value="3330" factoryDefault="3330" hidden="false" />
+                                  </Parameters>
+                                </Branch>
+                                <Branch name="SECS1">
+                                  <Parameters>
+                                    <Parameter name="DeviceID" description="Device ID" dynamic="true" type="StringType" value="3330" factoryDefault="3330" hidden="false" />
+                                    <Parameter name="Protocol" description="SECS1" dynamic="false" type="StringType" value="SECS1" factoryDefault="SECS1" hidden="false" />
+                                    <Parameter name="ComPort" description="Apex COM Port" dynamic="true" type="StringType" value="COM51" factoryDefault="COM51" hidden="false" />
+                                    <Parameter name="BaudRate" description="Baud Rate Note: Connection to DDC is Hardcoded at 9600" dynamic="true" type="StringType" value="9600" factoryDefault="9600" hidden="false" />
+                                    <Parameter name="T1Timeout" description="T1 Timeout in mSecs" dynamic="true" type="StringType" value="500" factoryDefault="500" hidden="false" />
+                                    <Parameter name="T2Timeout" description="T2 Timeout in mSecs" dynamic="true" type="StringType" value="5000" factoryDefault="5000" hidden="false" />
+                                    <Parameter name="T3Timeout" description="T3 Timeout in mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                                    <Parameter name="T4Timeout" description="T4 Timeout in mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                                    <Parameter name="Retry" description="Max Retries before error" dynamic="true" type="StringType" value="3" factoryDefault="3" hidden="false" />
+                                    <Parameter name="Role" description="HOST or EQUIPMENT" dynamic="true" type="StringType" value="EQUIPMENT" factoryDefault="EQUIPMENT" hidden="false" />
+                                  </Parameters>
+                                </Branch>
+                              </Branches>
+                            </Branch>
+                          </Branches>
+                        </Branch>
+                        <Branch name="Tube3">
+                          <Parameters>
+                            <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="TUBE3" factoryDefault="TUBE3" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                            <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="false" factoryDefault="true" hidden="false" />
+                          </Parameters>
+                          <Branches>
+                            <Branch name="SECSConnect">
+                              <Parameters>
+                                <Parameter name="Protocol" description="Choices are HSMS or SECS1" dynamic="false" classification="User" type="StringType" value="HSMS" factoryDefault="HSMS" hidden="false" />
+                              </Parameters>
+                              <Branches>
+                                <Branch name="HSMS">
+                                  <Parameters>
+                                    <Parameter name="DeviceID" description="Device ID" dynamic="true" type="StringType" value="3331" factoryDefault="3331" hidden="false" />
+                                  </Parameters>
+                                </Branch>
+                                <Branch name="SECS1">
+                                  <Parameters>
+                                    <Parameter name="DeviceID" description="Device ID" dynamic="true" type="StringType" value="3331" factoryDefault="3331" hidden="false" />
+                                    <Parameter name="Protocol" description="SECS1" dynamic="false" type="StringType" value="SECS1" factoryDefault="SECS1" hidden="false" />
+                                    <Parameter name="ComPort" description="Apex COM Port" dynamic="true" type="StringType" value="COM52" factoryDefault="COM52" hidden="false" />
+                                    <Parameter name="BaudRate" description="Baud Rate Note: Connection to DDC is Hardcoded at 9600" dynamic="true" type="StringType" value="9600" factoryDefault="9600" hidden="false" />
+                                    <Parameter name="T1Timeout" description="T1 Timeout in mSecs" dynamic="true" type="StringType" value="500" factoryDefault="500" hidden="false" />
+                                    <Parameter name="T2Timeout" description="T2 Timeout in mSecs" dynamic="true" type="StringType" value="5000" factoryDefault="5000" hidden="false" />
+                                    <Parameter name="T3Timeout" description="T3 Timeout in mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                                    <Parameter name="T4Timeout" description="T4 Timeout in mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                                    <Parameter name="Retry" description="Max Retries before error" dynamic="true" type="StringType" value="3" factoryDefault="3" hidden="false" />
+                                    <Parameter name="Role" description="HOST or EQUIPMENT" dynamic="true" type="StringType" value="EQUIPMENT" factoryDefault="EQUIPMENT" hidden="false" />
+                                  </Parameters>
+                                </Branch>
+                              </Branches>
+                            </Branch>
+                          </Branches>
+                        </Branch>
+                      </Branches>
+                    </Branch>
+                    <Branch name="Furnace2">
+                      <Branches>
+                        <Branch name="Tube4">
+                          <Parameters>
+                            <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="TUBE4" factoryDefault="TUBE4" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                            <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="false" factoryDefault="true" hidden="false" />
+                          </Parameters>
+                          <Branches>
+                            <Branch name="SECSConnect">
+                              <Parameters>
+                                <Parameter name="Protocol" description="Choices are HSMS or SECS1" dynamic="false" classification="User" type="StringType" value="HSMS" factoryDefault="HSMS" hidden="false" />
+                              </Parameters>
+                              <Branches>
+                                <Branch name="HSMS">
+                                  <Parameters>
+                                    <Parameter name="DeviceID" description="Device ID" dynamic="true" type="StringType" value="3332" factoryDefault="3332" hidden="false" />
+                                  </Parameters>
+                                </Branch>
+                                <Branch name="SECS1">
+                                  <Parameters>
+                                    <Parameter name="DeviceID" description="Device ID" dynamic="true" type="StringType" value="3332" factoryDefault="3332" hidden="false" />
+                                    <Parameter name="Protocol" description="SECS1" dynamic="false" type="StringType" value="SECS1" factoryDefault="SECS1" hidden="false" />
+                                    <Parameter name="ComPort" description="Apex COM Port" dynamic="true" type="StringType" value="COM53" factoryDefault="COM53" hidden="false" />
+                                    <Parameter name="BaudRate" description="Baud Rate Note: Connection to DDC is Hardcoded at 9600" dynamic="true" type="StringType" value="9600" factoryDefault="9600" hidden="false" />
+                                    <Parameter name="T1Timeout" description="T1 Timeout in mSecs" dynamic="true" type="StringType" value="500" factoryDefault="500" hidden="false" />
+                                    <Parameter name="T2Timeout" description="T2 Timeout in mSecs" dynamic="true" type="StringType" value="5000" factoryDefault="5000" hidden="false" />
+                                    <Parameter name="T3Timeout" description="T3 Timeout in mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                                    <Parameter name="T4Timeout" description="T4 Timeout in mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                                    <Parameter name="Retry" description="Max Retries before error" dynamic="true" type="StringType" value="3" factoryDefault="3" hidden="false" />
+                                    <Parameter name="Role" description="HOST or EQUIPMENT" dynamic="true" type="StringType" value="EQUIPMENT" factoryDefault="EQUIPMENT" hidden="false" />
+                                  </Parameters>
+                                </Branch>
+                              </Branches>
+                            </Branch>
+                          </Branches>
+                        </Branch>
+                        <Branch name="Tube5">
+                          <Parameters>
+                            <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="TUBE5" factoryDefault="TUBE5" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                            <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="false" factoryDefault="true" hidden="false" />
+                          </Parameters>
+                          <Branches>
+                            <Branch name="SECSConnect">
+                              <Parameters>
+                                <Parameter name="Protocol" description="Choices are HSMS or SECS1" dynamic="false" classification="User" type="StringType" value="HSMS" factoryDefault="HSMS" hidden="false" />
+                              </Parameters>
+                              <Branches>
+                                <Branch name="HSMS">
+                                  <Parameters>
+                                    <Parameter name="DeviceID" description="Device ID" dynamic="true" type="StringType" value="3333" factoryDefault="3333" hidden="false" />
+                                  </Parameters>
+                                </Branch>
+                                <Branch name="SECS1">
+                                  <Parameters>
+                                    <Parameter name="DeviceID" description="Device ID" dynamic="true" type="StringType" value="3333" factoryDefault="3333" hidden="false" />
+                                    <Parameter name="Protocol" description="SECS1" dynamic="false" type="StringType" value="SECS1" factoryDefault="SECS1" hidden="false" />
+                                    <Parameter name="ComPort" description="Apex COM Port" dynamic="true" type="StringType" value="COM54" factoryDefault="COM54" hidden="false" />
+                                    <Parameter name="BaudRate" description="Baud Rate Note: Connection to DDC is Hardcoded at 9600" dynamic="true" type="StringType" value="9600" factoryDefault="9600" hidden="false" />
+                                    <Parameter name="T1Timeout" description="T1 Timeout in mSecs" dynamic="true" type="StringType" value="500" factoryDefault="500" hidden="false" />
+                                    <Parameter name="T2Timeout" description="T2 Timeout in mSecs" dynamic="true" type="StringType" value="5000" factoryDefault="5000" hidden="false" />
+                                    <Parameter name="T3Timeout" description="T3 Timeout in mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                                    <Parameter name="T4Timeout" description="T4 Timeout in mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                                    <Parameter name="Retry" description="Max Retries before error" dynamic="true" type="StringType" value="3" factoryDefault="3" hidden="false" />
+                                    <Parameter name="Role" description="HOST or EQUIPMENT" dynamic="true" type="StringType" value="EQUIPMENT" factoryDefault="EQUIPMENT" hidden="false" />
+                                  </Parameters>
+                                </Branch>
+                              </Branches>
+                            </Branch>
+                          </Branches>
+                        </Branch>
+                        <Branch name="Tube6">
+                          <Parameters>
+                            <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="TUBE6" factoryDefault="TUBE6" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                            <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="false" factoryDefault="true" hidden="false" />
+                          </Parameters>
+                          <Branches>
+                            <Branch name="SECSConnect">
+                              <Parameters>
+                                <Parameter name="Protocol" description="Choices are HSMS or SECS1" dynamic="false" classification="User" type="StringType" value="HSMS" factoryDefault="HSMS" hidden="false" />
+                              </Parameters>
+                              <Branches>
+                                <Branch name="HSMS">
+                                  <Parameters>
+                                    <Parameter name="DeviceID" description="Device ID" dynamic="true" type="StringType" value="3334" factoryDefault="3334" hidden="false" />
+                                  </Parameters>
+                                </Branch>
+                                <Branch name="SECS1">
+                                  <Parameters>
+                                    <Parameter name="DeviceID" description="Device ID" dynamic="true" type="StringType" value="3334" factoryDefault="3334" hidden="false" />
+                                    <Parameter name="Protocol" description="SECS1" dynamic="false" type="StringType" value="SECS1" factoryDefault="SECS1" hidden="false" />
+                                    <Parameter name="ComPort" description="Apex COM Port" dynamic="true" type="StringType" value="COM55" factoryDefault="COM55" hidden="false" />
+                                    <Parameter name="BaudRate" description="Baud Rate Note: Connection to DDC is Hardcoded at 9600" dynamic="true" type="StringType" value="9600" factoryDefault="9600" hidden="false" />
+                                    <Parameter name="T1Timeout" description="T1 Timeout in mSecs" dynamic="true" type="StringType" value="500" factoryDefault="500" hidden="false" />
+                                    <Parameter name="T2Timeout" description="T2 Timeout in mSecs" dynamic="true" type="StringType" value="5000" factoryDefault="5000" hidden="false" />
+                                    <Parameter name="T3Timeout" description="T3 Timeout in mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                                    <Parameter name="T4Timeout" description="T4 Timeout in mSecs" dynamic="true" type="StringType" value="45000" factoryDefault="45000" hidden="false" />
+                                    <Parameter name="Retry" description="Max Retries before error" dynamic="true" type="StringType" value="3" factoryDefault="3" hidden="false" />
+                                    <Parameter name="Role" description="HOST or EQUIPMENT" dynamic="true" type="StringType" value="EQUIPMENT" factoryDefault="EQUIPMENT" hidden="false" />
+                                  </Parameters>
+                                </Branch>
+                              </Branches>
+                            </Branch>
+                          </Branches>
+                        </Branch>
+                      </Branches>
+                    </Branch>
+                  </Branches>
+                </Branch>
+              </Branches>
+            </Branch>
+          </Branches>
+        </Branch>
+        <Branch name="Robots">
+          <Branches>
+            <Branch name="MultiAxisRobot">
+              <Branches>
+                <Branch name="FFU">
+                  <Parameters>
+                    <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="FFU" factoryDefault="FFU" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                    <Parameter name="TransportLayerName" description="Name of the Transport Layer" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" />
+                  </Parameters>
+                </Branch>
+                <Branch name="LightTower">
+                  <Parameters>
+                    <Parameter name="FlashPeriod" description="Flash cycle time in seconds" dynamic="true" classification="User" type="DoubleType" value=".5" factoryDefault=".5" min=".1" max="10" hidden="false" />
+                    <Parameter name="TransportLayerName" description="Name of the Transport Layer" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" />
+                  </Parameters>
+                  <Branches>
+                    <Branch name="Signals">
+                      <Branches>
+                        <Branch name="Signal1">
+                          <Parameters>
+                            <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="Red" factoryDefault="Red" hidden="false" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ColorNameValidator" />
+                            <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                            <Parameter name="AllowedStates" description="Comma separated list of signal states allowed for this signal" dynamic="false" classification="User" type="StringType" value="Blink,On,Off" factoryDefault="Blink,On,Off" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.AllowedLightStatesValidator" />
+                            <Parameter name="BlinkConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="AlarmAttention" factoryDefault="AlarmAttention" hidden="true" />
+                            <Parameter name="OnConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="AlarmsSet" factoryDefault="AlarmsSet" hidden="true" />
+                            <Parameter name="OffConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="NoAlarmsSet" factoryDefault="NoAlarmsSet" hidden="true" />
+                          </Parameters>
+                        </Branch>
+                        <Branch name="Signal2">
+                          <Parameters>
+                            <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="Green" factoryDefault="Green" hidden="false" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ColorNameValidator" />
+                            <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                            <Parameter name="AllowedStates" description="Comma separated list of signal states allowed for this signal" dynamic="false" classification="User" type="StringType" value="Blink,On,Off" factoryDefault="Blink,On,Off" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.AllowedLightStatesValidator" />
+                            <Parameter name="BlinkConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="Paused" factoryDefault="Paused" hidden="true" />
+                            <Parameter name="OnConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="Executing" factoryDefault="Executing" hidden="true" />
+                            <Parameter name="OffConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="On" factoryDefault="On" hidden="true" />
+                          </Parameters>
+                        </Branch>
+                        <Branch name="Signal3">
+                          <Parameters>
+                            <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="Yellow" factoryDefault="Yellow" hidden="false" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ColorNameValidator" />
+                            <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                            <Parameter name="AllowedStates" description="Comma separated list of signal states allowed for this signal" dynamic="false" classification="User" type="StringType" value="Blink,On,Off" factoryDefault="Blink,On,Off" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.AllowedLightStatesValidator" />
+                            <Parameter name="BlinkConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="Off" factoryDefault="Off" hidden="true" />
+                            <Parameter name="OnConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="PortsReadyToLoad,PortsReadyToUnload" factoryDefault="PortsReadyToLoad,PortsReadyToUnload" hidden="true" />
+                            <Parameter name="OffConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="On" factoryDefault="On" hidden="true" />
+                          </Parameters>
+                        </Branch>
+                        <Branch name="Signal4">
+                          <Parameters>
+                            <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="Blue" factoryDefault="Blue" hidden="false" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ColorNameValidator" />
+                            <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                            <Parameter name="AllowedStates" description="Comma separated list of signal states allowed for this signal" dynamic="false" classification="User" type="StringType" value="Blink,On,Off" factoryDefault="Blink,On,Off" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.AllowedLightStatesValidator" />
+                            <Parameter name="BlinkConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="Off" factoryDefault="Off" hidden="true" />
+                            <Parameter name="OnConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="OnlineRemote,OnlineLocal" factoryDefault="OnlineRemote,OnlineLocal" hidden="true" />
+                            <Parameter name="OffConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="On" factoryDefault="On" hidden="true" />
+                          </Parameters>
+                        </Branch>
+                        <Branch name="Signal5">
+                          <Parameters>
+                            <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="White" factoryDefault="White" hidden="false" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ColorNameValidator" />
+                            <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="false" factoryDefault="false" hidden="false" />
+                            <Parameter name="AllowedStates" description="Comma separated list of signal states allowed for this signal" dynamic="false" classification="User" type="StringType" value="Blink,On,Off" factoryDefault="Blink,On,Off" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.AllowedLightStatesValidator" />
+                            <Parameter name="BlinkConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="Off" factoryDefault="Off" hidden="true" />
+                            <Parameter name="OnConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="Off" factoryDefault="Off" hidden="true" />
+                            <Parameter name="OffConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="On" factoryDefault="On" hidden="true" />
+                          </Parameters>
+                        </Branch>
+                        <Branch name="Signal6">
+                          <Parameters>
+                            <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="Buzzer1" factoryDefault="Buzzer1" hidden="false" />
+                            <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                            <Parameter name="AllowedStates" description="Comma separated list of signal states allowed for this signal" dynamic="false" classification="User" type="StringType" value="On,Off,Muted" factoryDefault="On,Off,Muted" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.AllowedBuzzerStatesValidator" />
+                            <Parameter name="BlinkConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="Off" factoryDefault="Off" hidden="true" />
+                            <Parameter name="OnConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="AlarmsSet" factoryDefault="AlarmsSet" hidden="true" />
+                            <Parameter name="OffConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="NoAlarmsSet" factoryDefault="NoAlarmsSet" hidden="true" />
+                          </Parameters>
+                        </Branch>
+                        <Branch name="Signal7">
+                          <Parameters>
+                            <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="Buzzer2" factoryDefault="Buzzer2" hidden="false" />
+                            <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="false" factoryDefault="true" hidden="false" />
+                            <Parameter name="AllowedStates" description="Comma separated list of signal states allowed for this signal" dynamic="false" classification="User" type="StringType" value="On,Off,Muted" factoryDefault="On,Off,Muted" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.AllowedBuzzerStatesValidator" />
+                            <Parameter name="BlinkConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="Off" factoryDefault="Off" hidden="true" />
+                            <Parameter name="OnConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="Off" factoryDefault="Off" hidden="true" />
+                            <Parameter name="OffConditions" description="Comma separated list of light tower condition names to be ORed together for the equation for this signal state" dynamic="false" classification="User" type="StringType" value="On" factoryDefault="On" hidden="true" />
+                          </Parameters>
+                        </Branch>
+                      </Branches>
+                    </Branch>
+                  </Branches>
+                </Branch>
+                <Branch name="Robots">
+                  <Branches>
+                    <Branch name="Robot1">
+                      <Parameters>
+                        <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="MultiAxisRobot" factoryDefault="MultiAxisRobot" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                        <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                        <Parameter name="TransportLayerName" description="Name of the Transport Layer" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" />
+                      </Parameters>
+                      <Branches>
+                        <Branch name="Arm">
+                          <Parameters>
+                            <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="Arm" factoryDefault="Arm" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                            <Parameter name="EfemStation" description="Component name compatible with the EFEM naming conventions" dynamic="false" classification="User" type="StringType" value="ARM1" factoryDefault="ARM1" hidden="true" />
+                          </Parameters>
+                        </Branch>
+                      </Branches>
+                    </Branch>
+                  </Branches>
+                </Branch>
+                <Branch name="TransportLayers">
+                  <Branches>
+                    <Branch name="TransportLayer1">
+                      <Parameters>
+                        <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                        <Parameter name="Address" description="IP Address" dynamic="true" classification="User" type="StringType" value="192.168.0.254" factoryDefault="127.0.0.1" hidden="true" />
+                        <Parameter name="Port" description="IP Port" dynamic="true" classification="User" type="IntType" value="60000" factoryDefault="13000" min="1" max="2147483647" hidden="true" />
+                        <Parameter name="FailsafeTimeout" description="Maximum amount of time to wait for an INF message (ms)" dynamic="true" classification="User" type="IntType" value="60000" factoryDefault="60000" min="100" max="100000000" hidden="true" />
+                        <Parameter name="CommunicationFailedRetryTime" description="Amount of time to wait before attempting to reconnect to the EFEM after a failed connection attempt" dynamic="true" classification="User" type="IntType" value="1000" factoryDefault="1000" min="100" max="100000000" hidden="true" />
+                      </Parameters>
+                    </Branch>
+                  </Branches>
+                </Branch>
+              </Branches>
+            </Branch>
+            <Branch name="ScaraRobot">
+              <Branches>
+                <Branch name="FFU">
+                  <Parameters>
+                    <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="FFU" factoryDefault="FFU" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                    <Parameter name="TransportLayerName" description="Name of the Transport Layer" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" />
+                  </Parameters>
+                </Branch>
+                <Branch name="Robots">
+                  <Branches>
+                    <Branch name="Robot1">
+                      <Parameters>
+                        <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="EfemRobot" factoryDefault="EfemRobot" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                        <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                        <Parameter name="TransportLayerName" description="Name of the Transport Layer" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" />
+                        <Parameter name="DeviceId" dynamic="false" type="StringType" value="ScaraRobot" factoryDefault="ScaraRobot" hidden="false" />
+                      </Parameters>
+                      <Branches>
+                        <Branch name="Arms">
+                          <Branches>
+                            <Branch name="Arm1">
+                              <Parameters>
+                                <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="ArmB" factoryDefault="ArmB" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                                <Parameter name="EfemStation" description="Component name compatible with the EFEM naming conventions" dynamic="false" classification="User" type="StringType" value="ARM1" factoryDefault="ARM1" hidden="true" />
+                              </Parameters>
+                            </Branch>
+                          </Branches>
+                        </Branch>
+                      </Branches>
+                    </Branch>
+                  </Branches>
+                </Branch>
+                <Branch name="TransportLayers">
+                  <Branches>
+                    <Branch name="TransportLayer1">
+                      <Parameters>
+                        <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                        <Parameter name="Address" description="IP Address" dynamic="true" classification="User" type="StringType" value="192.168.0.253" factoryDefault="127.0.0.1" hidden="true" />
+                        <Parameter name="Port" description="IP Port" dynamic="true" classification="User" type="IntType" value="10110" factoryDefault="13000" min="1" max="65535" hidden="true" />
+                        <Parameter name="FailsafeTimeout" description="Maximum amount of time to wait for an INF message (ms)" dynamic="true" classification="User" type="IntType" value="60000" factoryDefault="60000" min="100" max="100000000" hidden="true" />
+                        <Parameter name="CommunicationFailedRetryTime" description="Amount of time to wait before attempting to reconnect to the EFEM after a failed connection attempt" dynamic="true" classification="User" type="IntType" value="1000" factoryDefault="1000" min="100" max="100000000" hidden="true" />
+                      </Parameters>
+                    </Branch>
+                  </Branches>
+                </Branch>
+              </Branches>
+            </Branch>
+          </Branches>
+        </Branch>
+        <Branch name="FOUPStocker">
+          <Branches>
+            <Branch name="FOUPStocker1">
+              <Branches>
+                <Branch name="TransportLayers">
+                  <Branches>
+                    <Branch name="TransportLayer1">
+                      <Parameters>
+                        <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                        <Parameter name="Address" description="IP Address" dynamic="true" classification="User" type="StringType" value="127.0.0.1" factoryDefault="127.0.0.1" hidden="true" />
+                        <Parameter name="Port" description="IP Port" dynamic="true" classification="User" type="IntType" value="13000" factoryDefault="13000" min="1" max="65535" hidden="true" />
+                        <Parameter name="FailsafeTimeout" description="Maximum amount of time to wait for an INF message (ms)" dynamic="true" classification="User" type="IntType" value="60000" factoryDefault="60000" min="100" max="100000000" hidden="true" />
+                        <Parameter name="CommunicationFailedRetryTime" description="Amount of time to wait before attempting to reconnect to the EFEM after a failed connection attempt" dynamic="true" classification="User" type="IntType" value="1000" factoryDefault="1000" min="100" max="100000000" hidden="true" />
+                      </Parameters>
+                    </Branch>
+                  </Branches>
+                </Branch>
+                <Branch name="Robots">
+                  <Branches>
+                    <Branch name="Robot1">
+                      <Parameters>
+                        <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="EfemRobot" factoryDefault="EfemRobot" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                        <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                        <Parameter name="TransportLayerName" description="Name of the Transport Layer" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" />
+                        <Parameter name="DeviceId" dynamic="false" type="StringType" value="NTB1" factoryDefault="NTB1" hidden="false" />
+                      </Parameters>
+                      <Branches>
+                        <Branch name="Arms">
+                          <Branches>
+                            <Branch name="Arm1">
+                              <Parameters>
+                                <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="ArmB" factoryDefault="ArmB" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                                <Parameter name="EfemStation" description="Component name compatible with the EFEM naming conventions" dynamic="false" classification="User" type="StringType" value="ARM1" factoryDefault="ARM1" hidden="true" />
+                              </Parameters>
+                            </Branch>
+                          </Branches>
+                        </Branch>
+                      </Branches>
+                    </Branch>
+                  </Branches>
+                </Branch>
+                <Branch name="ExternalLoadPorts">
+                  <Branches>
+                    <Branch name="LoadPort101">
+                      <Parameters>
+                        <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="LP1" factoryDefault="LP1" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                        <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                        <Parameter name="GenerateCarrierId" description="Generate carrier ID in software, do not read tag" dynamic="true" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                        <Parameter name="CarrierIdLength" description="Length of carrier ID to be generated" dynamic="true" classification="User" type="IntType" value="8" factoryDefault="8" min="1" max="40" hidden="false" />
+                        <Parameter name="EfemStation" description="Component name compatible with the EFEM naming conventions" dynamic="false" classification="User" type="StringType" value="P1" factoryDefault="P1" hidden="true" />
+                        <Parameter name="TransportLayerName" description="Name of the Transport Layer" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" />
+                        <Parameter name="Port" description="IP Port" dynamic="true" classification="User" type="IntType" value="13000" factoryDefault="4999" min="1" max="65535" hidden="true" />
+                        <Parameter name="Address" description="IP Address" dynamic="true" classification="User" type="StringType" value="127.0.0.1" factoryDefault="127.0.0.1" hidden="true" />
+                        <Parameter name="IndicatorMode" description="Select the configuration of Status Indicators displayed on the Local LCD screen." dynamic="false" classification="User" type="StringType" value="Brooks" factoryDefault="Brooks" hidden="false">
+                          <ValidValues>
+                            <Value>AMD</Value>
+                            <Value>Brooks</Value>
+                            <Value>Chartered-Fab7</Value>
+                            <Value>Elpida</Value>
+                            <Value>Fujitsu-Mie</Value>
+                            <Value>Hynix</Value>
+                            <Value>IBM</Value>
+                            <Value>Infineon-Dresden</Value>
+                            <Value>Infineon-Richmond</Value>
+                            <Value>Inotera</Value>
+                            <Value>Intel-D1C</Value>
+                            <Value>Intel-D1D</Value>
+                            <Value>Matsushita</Value>
+                            <Value>Micron</Value>
+                            <Value>NEC</Value>
+                            <Value>PowerChip</Value>
+                            <Value>ProMos</Value>
+                            <Value>Samsung</Value>
+                            <Value>SMIC-Fab4</Value>
+                            <Value>Sony-Kumamoto</Value>
+                            <Value>Sony-Nagasaki</Value>
+                            <Value>ST-Micro</Value>
+                            <Value>TI-DMOS6</Value>
+                            <Value>Toshiba-Oita</Value>
+                            <Value>Trecenti-Renesas</Value>
+                            <Value>TSMC-12</Value>
+                            <Value>TSMC-14</Value>
+                            <Value>UMC</Value>
+                            <Value>UMCI</Value>
+                            <Value>Wacker/Siltronics</Value>
+                            <Value>Winbond-Fab6</Value>
+                            <Value>YEC</Value>
+                          </ValidValues>
+                        </Parameter>
+                      </Parameters>
+                    </Branch>
+                    <Branch name="LoadPort102">
+                      <Parameters>
+                        <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="LP2" factoryDefault="LP2" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                        <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                        <Parameter name="GenerateCarrierId" description="Generate carrier ID in software, do not read tag" dynamic="true" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                        <Parameter name="CarrierIdLength" description="Length of carrier ID to be generated" dynamic="true" classification="User" type="IntType" value="8" factoryDefault="8" min="1" max="40" hidden="false" />
+                        <Parameter name="EfemStation" description="Component name compatible with the EFEM naming conventions" dynamic="false" classification="User" type="StringType" value="P2" factoryDefault="P2" hidden="true" />
+                        <Parameter name="TransportLayerName" description="Name of the Transport Layer" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" />
+                        <Parameter name="Port" description="IP Port" dynamic="true" classification="User" type="IntType" value="13000" factoryDefault="5000" min="1" max="65535" hidden="true" />
+                        <Parameter name="Address" description="IP Address" dynamic="true" classification="User" type="StringType" value="127.0.0.1" factoryDefault="127.0.0.1" hidden="true" />
+                        <Parameter name="IndicatorMode" description="Select the configuration of Status Indicators displayed on the Local LCD screen." dynamic="false" classification="User" type="StringType" value="Brooks" factoryDefault="Brooks" hidden="false">
+                          <ValidValues>
+                            <Value>AMD</Value>
+                            <Value>Brooks</Value>
+                            <Value>Chartered-Fab7</Value>
+                            <Value>Elpida</Value>
+                            <Value>Fujitsu-Mie</Value>
+                            <Value>Hynix</Value>
+                            <Value>IBM</Value>
+                            <Value>Infineon-Dresden</Value>
+                            <Value>Infineon-Richmond</Value>
+                            <Value>Inotera</Value>
+                            <Value>Intel-D1C</Value>
+                            <Value>Intel-D1D</Value>
+                            <Value>Matsushita</Value>
+                            <Value>Micron</Value>
+                            <Value>NEC</Value>
+                            <Value>PowerChip</Value>
+                            <Value>ProMos</Value>
+                            <Value>Samsung</Value>
+                            <Value>SMIC-Fab4</Value>
+                            <Value>Sony-Kumamoto</Value>
+                            <Value>Sony-Nagasaki</Value>
+                            <Value>ST-Micro</Value>
+                            <Value>TI-DMOS6</Value>
+                            <Value>Toshiba-Oita</Value>
+                            <Value>Trecenti-Renesas</Value>
+                            <Value>TSMC-12</Value>
+                            <Value>TSMC-14</Value>
+                            <Value>UMC</Value>
+                            <Value>UMCI</Value>
+                            <Value>Wacker/Siltronics</Value>
+                            <Value>Winbond-Fab6</Value>
+                            <Value>YEC</Value>
+                          </ValidValues>
+                        </Parameter>
+                      </Parameters>
+                    </Branch>
+                    <Branch name="LoadPort103">
+                      <Parameters>
+                        <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="LP3" factoryDefault="LP3" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                        <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                        <Parameter name="GenerateCarrierId" description="Generate carrier ID in software, do not read tag" dynamic="true" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                        <Parameter name="CarrierIdLength" description="Length of carrier ID to be generated" dynamic="true" classification="User" type="IntType" value="8" factoryDefault="8" min="1" max="40" hidden="false" />
+                        <Parameter name="EfemStation" description="Component name compatible with the EFEM naming conventions" dynamic="false" classification="User" type="StringType" value="P3" factoryDefault="P3" hidden="true" />
+                        <Parameter name="TransportLayerName" description="Name of the Transport Layer" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" />
+                        <Parameter name="Port" description="IP Port" dynamic="true" classification="User" type="IntType" value="13000" factoryDefault="5001" min="1" max="65535" hidden="true" />
+                        <Parameter name="Address" description="IP Address" dynamic="true" classification="User" type="StringType" value="127.0.0.1" factoryDefault="127.0.0.1" hidden="true" />
+                        <Parameter name="IndicatorMode" description="Select the configuration of Status Indicators displayed on the Local LCD screen." dynamic="false" classification="User" type="StringType" value="Brooks" factoryDefault="Brooks" hidden="false">
+                          <ValidValues>
+                            <Value>AMD</Value>
+                            <Value>Brooks</Value>
+                            <Value>Chartered-Fab7</Value>
+                            <Value>Elpida</Value>
+                            <Value>Fujitsu-Mie</Value>
+                            <Value>Hynix</Value>
+                            <Value>IBM</Value>
+                            <Value>Infineon-Dresden</Value>
+                            <Value>Infineon-Richmond</Value>
+                            <Value>Inotera</Value>
+                            <Value>Intel-D1C</Value>
+                            <Value>Intel-D1D</Value>
+                            <Value>Matsushita</Value>
+                            <Value>Micron</Value>
+                            <Value>NEC</Value>
+                            <Value>PowerChip</Value>
+                            <Value>ProMos</Value>
+                            <Value>Samsung</Value>
+                            <Value>SMIC-Fab4</Value>
+                            <Value>Sony-Kumamoto</Value>
+                            <Value>Sony-Nagasaki</Value>
+                            <Value>ST-Micro</Value>
+                            <Value>TI-DMOS6</Value>
+                            <Value>Toshiba-Oita</Value>
+                            <Value>Trecenti-Renesas</Value>
+                            <Value>TSMC-12</Value>
+                            <Value>TSMC-14</Value>
+                            <Value>UMC</Value>
+                            <Value>UMCI</Value>
+                            <Value>Wacker/Siltronics</Value>
+                            <Value>Winbond-Fab6</Value>
+                            <Value>YEC</Value>
+                          </ValidValues>
+                        </Parameter>
+                      </Parameters>
+                    </Branch>
+                    <Branch name="LoadPort104">
+                      <Parameters>
+                        <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="LP4" factoryDefault="LP4" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                        <Parameter name="Present" description="Component is installed" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                        <Parameter name="GenerateCarrierId" description="Generate carrier ID in software, do not read tag" dynamic="true" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+                        <Parameter name="CarrierIdLength" description="Length of carrier ID to be generated" dynamic="true" classification="User" type="IntType" value="8" factoryDefault="8" min="1" max="40" hidden="false" />
+                        <Parameter name="EfemStation" description="Component name compatible with the EFEM naming conventions" dynamic="false" classification="User" type="StringType" value="P4" factoryDefault="P4" hidden="true" />
+                        <Parameter name="TransportLayerName" description="Name of the Transport Layer" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" />
+                        <Parameter name="Port" description="IP Port" dynamic="true" classification="User" type="IntType" value="13000" factoryDefault="5002" min="1" max="65535" hidden="true" />
+                        <Parameter name="Address" description="IP Address" dynamic="true" classification="User" type="StringType" value="127.0.0.1" factoryDefault="127.0.0.1" hidden="true" />
+                        <Parameter name="IndicatorMode" description="Select the configuration of Status Indicators displayed on the Local LCD screen." dynamic="false" classification="User" type="StringType" value="Brooks" factoryDefault="Brooks" hidden="false">
+                          <ValidValues>
+                            <Value>AMD</Value>
+                            <Value>Brooks</Value>
+                            <Value>Chartered-Fab7</Value>
+                            <Value>Elpida</Value>
+                            <Value>Fujitsu-Mie</Value>
+                            <Value>Hynix</Value>
+                            <Value>IBM</Value>
+                            <Value>Infineon-Dresden</Value>
+                            <Value>Infineon-Richmond</Value>
+                            <Value>Inotera</Value>
+                            <Value>Intel-D1C</Value>
+                            <Value>Intel-D1D</Value>
+                            <Value>Matsushita</Value>
+                            <Value>Micron</Value>
+                            <Value>NEC</Value>
+                            <Value>PowerChip</Value>
+                            <Value>ProMos</Value>
+                            <Value>Samsung</Value>
+                            <Value>SMIC-Fab4</Value>
+                            <Value>Sony-Kumamoto</Value>
+                            <Value>Sony-Nagasaki</Value>
+                            <Value>ST-Micro</Value>
+                            <Value>TI-DMOS6</Value>
+                            <Value>Toshiba-Oita</Value>
+                            <Value>Trecenti-Renesas</Value>
+                            <Value>TSMC-12</Value>
+                            <Value>TSMC-14</Value>
+                            <Value>UMC</Value>
+                            <Value>UMCI</Value>
+                            <Value>Wacker/Siltronics</Value>
+                            <Value>Winbond-Fab6</Value>
+                            <Value>YEC</Value>
+                          </ValidValues>
+                        </Parameter>
+                      </Parameters>
+                    </Branch>
+                  </Branches>
+                </Branch>
+                <Branch name="InternalBuffers">
+                  <Parameters>
+                    <Parameter name="InternalBufferCount" description="Number of internal locations where carriers can be placed." dynamic="false" classification="User" type="StringType" value="64" factoryDefault="64" min="1" max="64" hidden="false" />
+                  </Parameters>
+                </Branch>
+              </Branches>
+            </Branch>
+          </Branches>
+        </Branch>
+        <Branch name="MiniEnvironment">
+          <Branches>
+            <Branch name="TemperatureSensors" />
+            <Branch name="EMOStatus" />
+            <Branch name="ToxicsSensors" />
+            <Branch name="ExternalDataInputs" />
+            <Branch name="AdtionalInputs" />
+            <Branch name="AdtionalOutputs" />
+            <Branch name="MiniEnvironment1">
+              <Branches>
+                <Branch name="TransportLayers">
+                  <Branches>
+                    <Branch name="TransportLayer1">
+                      <Parameters>
+                        <Parameter name="Name" description="Name of the component" dynamic="false" classification="User" type="StringType" value="RR741EFEM" factoryDefault="RR741EFEM" hidden="true" validator="Cimetrix.ConfigurationValidators:Cimetrix.CimControlFramework.ConfigurationValidators.ComponentNameValidator" />
+                        <Parameter name="Address" description="IP Address" dynamic="true" classification="User" type="StringType" value="172.20.10.100" factoryDefault="172.20.10.100" hidden="true" />
+                        <Parameter name="AddressInSimulation" description="IP Address using in simulation" dynamic="true" classification="User" type="StringType" value="127.0.0.1" factoryDefault="127.0.0.1" hidden="true" />
+                        <Parameter name="Port" description="IP Port" dynamic="true" classification="User" type="IntType" value="13000" factoryDefault="13000" min="1" max="65535" hidden="true" />
+                        <Parameter name="FailsafeTimeout" description="Maximum amount of time to wait for an INF message (ms)" dynamic="true" classification="User" type="IntType" value="60000" factoryDefault="60000" min="100" max="100000000" hidden="true" />
+                        <Parameter name="CommunicationFailedRetryTime" description="Amount of time to wait before attempting to reconnect to the EFEM after a failed connection attempt" dynamic="true" classification="User" type="IntType" value="1000" factoryDefault="1000" min="100" max="100000000" hidden="true" />
+                      </Parameters>
+                    </Branch>
+                  </Branches>
+                </Branch>
+              </Branches>
+            </Branch>
+          </Branches>
+        </Branch>
+        <Branch name="Pond">
+          <Branches>
+            <Branch name="PondStations">
+              <Branches>
+                <Branch name="ExchangeRackStations">
+                  <Branches>
+                    <Branch name="Exchange1Station">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="K" factoryDefault="K" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Left" factoryDefault="Left" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Exchange Left" factoryDefault="Exchange Left" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Exchange2Station">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="O" factoryDefault="O" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Right" factoryDefault="Right" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Exchange Right" factoryDefault="Exchange Right" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                  </Branches>
+                </Branch>
+                <Branch name="LoadStations">
+                  <Branches>
+                    <Branch name="Load1Station">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="G" factoryDefault="G" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Left" factoryDefault="Left" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Load Left" factoryDefault="Load Left" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Load2Station">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="H" factoryDefault="H" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Right" factoryDefault="Right" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Load Right" factoryDefault="Load Right" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                  </Branches>
+                </Branch>
+                <Branch name="QueueRackStations">
+                  <Branches>
+                    <Branch name="Queue1Station">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="I" factoryDefault="I" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Left" factoryDefault="Left" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Queue 1 Left" factoryDefault="Queue 1 Left" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Queue2Station">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="J" factoryDefault="J" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Left" factoryDefault="Left" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Queue 2 Left" factoryDefault="Queue 2 Left" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Queue3Station">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="L" factoryDefault="L" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Left" factoryDefault="Left" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Queue 3 Left" factoryDefault="Queue 3 Left" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Queue4Station">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="M" factoryDefault="M" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Right" factoryDefault="Right" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Queue 4 Right" factoryDefault="Queue 4 Right" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Queue5Station">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="N" factoryDefault="N" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Right" factoryDefault="Right" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Queue 5 Right" factoryDefault="Queue 5 Right" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Queue6Station">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="P" factoryDefault="P" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Right" factoryDefault="Right" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Queue 6 Right" factoryDefault="Queue 6 Right" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                  </Branches>
+                </Branch>
+                <Branch name="TubePaddleStations">
+                  <Branches>
+                    <Branch name="Tube1PaddleStation">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="A" factoryDefault="A" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Left" factoryDefault="Left" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" description="Do not modify here.  THis name is copied from " dynamic="false" type="StringType" value="TUBE1Paddle" factoryDefault="" hidden="false" />
+                        <Parameter name="NameAppendage" dynamic="false" type="StringType" value="Paddle" factoryDefault="Paddle" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Tube2PaddleStation">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="B" factoryDefault="B" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Left" factoryDefault="Left" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="TUBE2Paddle" factoryDefault="" hidden="false" />
+                        <Parameter name="NameAppendage" dynamic="false" type="StringType" value="Paddle" factoryDefault="Paddle" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Tube3PaddleStation">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="C" factoryDefault="C" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Left" factoryDefault="Left" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="TUBE3Paddle" factoryDefault="" hidden="false" />
+                        <Parameter name="NameAppendage" dynamic="false" type="StringType" value="Paddle" factoryDefault="Paddle" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Tube4PaddleStation">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="D" factoryDefault="D" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Right" factoryDefault="Right" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="TUBE4Paddle" factoryDefault="" hidden="false" />
+                        <Parameter name="NameAppendage" dynamic="false" type="StringType" value="Paddle" factoryDefault="Paddle" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Tube5PaddleStation">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="E" factoryDefault="E" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Right" factoryDefault="Right" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="TUBE5Paddle" factoryDefault="" hidden="false" />
+                        <Parameter name="NameAppendage" dynamic="false" type="StringType" value="Paddle" factoryDefault="Paddle" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Tube6PaddleStation">
+                      <Parameters>
+                        <Parameter name="RobotLocId" dynamic="false" type="StringType" value="F" factoryDefault="F" hidden="false" />
+                        <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Right" factoryDefault="Right" hidden="false">
+                          <ValidValues>
+                            <Value>Left</Value>
+                            <Value>Right</Value>
+                          </ValidValues>
+                        </Parameter>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="TUBE6Paddle" factoryDefault="" hidden="false" />
+                        <Parameter name="NameAppendage" dynamic="false" type="StringType" value="Paddle" factoryDefault="Paddle" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                  </Branches>
+                </Branch>
+              </Branches>
+            </Branch>
+            <Branch name="New Branch 2" />
+            <Branch name="Boats">
+              <Branches>
+                <Branch name="BoatTypes">
+                  <Branches>
+                    <Branch name="BoatType0">
+                      <Parameters>
+                        <Parameter name="LoadingPatterns" dynamic="false" type="StringType" value="BTIF5,B10-F5,B10;BTIFB10-FB10" factoryDefault="BTIF5,B10-F5,B10;BTIFB10-FB10" hidden="false" />
+                        <Parameter name="SlotCapacity" dynamic="false" type="IntType" value="208" factoryDefault="208" hidden="false" />
+                        <Parameter name="SlotSpacing" dynamic="false" type="StringType" value="BTIFB5-FB5" factoryDefault="BTIFB5-FB5" hidden="false" />
+                        <Parameter name="Description" description="Changing the value, changes what is displayed in GUI" dynamic="false" type="StringType" value="BTI Boat 208 Slots" factoryDefault="BTI Boat 208 Slots" hidden="false" />
+                        <Parameter name="Type" description="Type of Object" dynamic="false" type="StringType" value="BTIB208S" factoryDefault="BTIB208S" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="BoatType1">
+                      <Parameters>
+                        <Parameter name="LoadingPatterns" dynamic="false" type="StringType" value="CSF3.5,B9-F3.5,B9" factoryDefault="CSF3.5,B9-F3.5,B9" hidden="false" />
+                        <Parameter name="SlotCapacity" dynamic="false" type="IntType" value="168" factoryDefault="168" hidden="false" />
+                        <Parameter name="SlotSpacing" dynamic="false" type="StringType" value="CSF3.5,B9-F3.5,B9" factoryDefault="CSF3.5,B9-F3.5,B9" hidden="false" />
+                        <Parameter name="Description" description="Changing the value, changes what is displayed in GUI" dynamic="false" type="StringType" value="Customer Boat 168 Slots" factoryDefault="Customer Boat 168 Slots" hidden="false" />
+                        <Parameter name="Type" description="Type of Object" dynamic="false" type="StringType" value="CSTB168S" factoryDefault="CSTB168S" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="BoatType2">
+                      <Parameters>
+                        <Parameter name="LoadingPatterns" dynamic="false" type="StringType" value="CSFB10-FB10" factoryDefault="CSFB10-FB10" hidden="false" />
+                        <Parameter name="SlotCapacity" dynamic="false" type="IntType" value="110" factoryDefault="110" hidden="false" />
+                        <Parameter name="SlotSpacing" dynamic="false" type="StringType" value="CSFB10-FB10" factoryDefault="CSFB10-FB10" hidden="false" />
+                        <Parameter name="Description" description="Changing the value, changes what is displayed in GUI" dynamic="false" type="StringType" value="Customer Boat 110 Slots" factoryDefault="Customer Boat 110 Slots" hidden="false" />
+                        <Parameter name="Type" description="Type of Object" dynamic="false" type="StringType" value="CSTB110S" factoryDefault="CSTB110S" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                  </Branches>
+                </Branch>
+                <Branch name="BoatsPresent">
+                  <Branches>
+                    <Branch name="Boat1">
+                      <Parameters>
+                        <Parameter name="Enabled" dynamic="false" type="BoolType" value="True" factoryDefault="True" hidden="false" />
+                        <Parameter name="BoatNumber" dynamic="false" type="IntType" value="1" factoryDefault="1" hidden="false" />
+                        <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="Tube1" factoryDefault="Tube1" hidden="false" />
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Boat1" factoryDefault="Boat1" hidden="false" />
+                        <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo435234523" factoryDefault="Demo435234523" hidden="false" />
+                        <Parameter name="Type" dynamic="false" type="StringType" value="BoatType0" factoryDefault="BoatType0" hidden="false" />
+                      </Parameters>
+                      <Branches />
+                    </Branch>
+                    <Branch name="Boat2">
+                      <Parameters>
+                        <Parameter name="Enabled" dynamic="false" type="BoolType" value="True" factoryDefault="True" hidden="false" />
+                        <Parameter name="BoatNumber" dynamic="false" type="IntType" value="2" factoryDefault="2" hidden="false" />
+                        <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="Queue1Station" factoryDefault="Queue1Station" hidden="false" />
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Boat2" factoryDefault="Boat2" hidden="false" />
+                        <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo34523452343456" factoryDefault="Demo34523452343456" hidden="false" />
+                        <Parameter name="Type" dynamic="false" type="StringType" value="BoatType0" factoryDefault="BoatType0" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Boat3">
+                      <Parameters>
+                        <Parameter name="Enabled" dynamic="false" type="BoolType" value="True" factoryDefault="True" hidden="false" />
+                        <Parameter name="BoatNumber" dynamic="false" type="IntType" value="3" factoryDefault="3" hidden="false" />
+                        <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="Tube2" factoryDefault="Tube2" hidden="false" />
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Boat3" factoryDefault="Boat3" hidden="false" />
+                        <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo45634563456" factoryDefault="Demo45634563456" hidden="false" />
+                        <Parameter name="Type" dynamic="false" type="StringType" value="BoatType0" factoryDefault="BoatType0" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Boat4">
+                      <Parameters>
+                        <Parameter name="Enabled" dynamic="false" type="BoolType" value="True" factoryDefault="True" hidden="false" />
+                        <Parameter name="BoatNumber" dynamic="false" type="IntType" value="4" factoryDefault="4" hidden="false" />
+                        <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="Queue2Station" factoryDefault="Queue2Station" hidden="false" />
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Boat4" factoryDefault="Boat4" hidden="false" />
+                        <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo546456456" factoryDefault="Demo546456456" hidden="false" />
+                        <Parameter name="Type" dynamic="false" type="StringType" value="BoatType0" factoryDefault="BoatType0" hidden="false" />
+                      </Parameters>
+                      <Branches />
+                    </Branch>
+                    <Branch name="Boat5">
+                      <Parameters>
+                        <Parameter name="Enabled" dynamic="false" type="BoolType" value="True" factoryDefault="True" hidden="false" />
+                        <Parameter name="BoatNumber" dynamic="false" type="IntType" value="5" factoryDefault="5" hidden="false" />
+                        <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="Tube3" factoryDefault="Tube3" hidden="false" />
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Boat5" factoryDefault="Boat5" hidden="false" />
+                        <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo7745634545" factoryDefault="Demo7745634545" hidden="false" />
+                        <Parameter name="Type" dynamic="false" type="StringType" value="BoatType0" factoryDefault="BoatType0" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Boat6">
+                      <Parameters>
+                        <Parameter name="Enabled" dynamic="false" type="BoolType" value="False" factoryDefault="True" hidden="false" />
+                        <Parameter name="BoatNumber" dynamic="false" type="IntType" value="6" factoryDefault="6" hidden="false" />
+                        <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="Queue3Station" factoryDefault="Queue3Station" hidden="false" />
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Boat6" factoryDefault="Boat6" hidden="false" />
+                        <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo45745734534576" factoryDefault="Demo45745734534576" hidden="false" />
+                        <Parameter name="Type" dynamic="false" type="StringType" value="BoatType0" factoryDefault="BoatType0" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Boat7">
+                      <Parameters>
+                        <Parameter name="Enabled" dynamic="false" type="BoolType" value="False" factoryDefault="True" hidden="false" />
+                        <Parameter name="BoatNumber" dynamic="false" type="IntType" value="7" factoryDefault="7" hidden="false" />
+                        <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="Tube4" factoryDefault="Tube4" hidden="false" />
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Boat7" factoryDefault="Boat7" hidden="false" />
+                        <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo256245624345" factoryDefault="Demo256245624345" hidden="false" />
+                        <Parameter name="Type" dynamic="false" type="StringType" value="BoatType0" factoryDefault="BoatType0" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Boat8">
+                      <Parameters>
+                        <Parameter name="Enabled" dynamic="false" type="BoolType" value="True" factoryDefault="True" hidden="false" />
+                        <Parameter name="BoatNumber" dynamic="false" type="IntType" value="8" factoryDefault="8" hidden="false" />
+                        <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="Queue4Station" factoryDefault="Queue4Station" hidden="false" />
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Boat8" factoryDefault="Boat8" hidden="false" />
+                        <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo4576454545" factoryDefault="Demo4576454545" hidden="false" />
+                        <Parameter name="Type" dynamic="false" type="StringType" value="BoatType0" factoryDefault="BoatType0" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Boat9">
+                      <Parameters>
+                        <Parameter name="Enabled" dynamic="false" type="BoolType" value="False" factoryDefault="True" hidden="false" />
+                        <Parameter name="BoatNumber" dynamic="false" type="IntType" value="9" factoryDefault="9" hidden="false" />
+                        <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="Tube5" factoryDefault="Tube5" hidden="false" />
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Boat9" factoryDefault="Boat9" hidden="false" />
+                        <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo23456457245" factoryDefault="Demo23456457245" hidden="false" />
+                        <Parameter name="Type" dynamic="false" type="StringType" value="BoatType0" factoryDefault="BoatType0" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Boat10">
+                      <Parameters>
+                        <Parameter name="Enabled" dynamic="false" type="BoolType" value="True" factoryDefault="True" hidden="false" />
+                        <Parameter name="BoatNumber" dynamic="false" type="IntType" value="10" factoryDefault="10" hidden="false" />
+                        <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="Queue5Station" factoryDefault="Queue5Station" hidden="false" />
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Boat10" factoryDefault="Boat10" hidden="false" />
+                        <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo34453467456" factoryDefault="Demo34453467456" hidden="false" />
+                        <Parameter name="Type" dynamic="false" type="StringType" value="BoatType0" factoryDefault="BoatType0" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Boat11">
+                      <Parameters>
+                        <Parameter name="Enabled" dynamic="false" type="BoolType" value="False" factoryDefault="True" hidden="false" />
+                        <Parameter name="BoatNumber" dynamic="false" type="IntType" value="11" factoryDefault="11" hidden="false" />
+                        <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="Tube6" factoryDefault="Tube6" hidden="false" />
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Boat11" factoryDefault="Boat11" hidden="false" />
+                        <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo34534534563" factoryDefault="Demo34534534563" hidden="false" />
+                        <Parameter name="Type" dynamic="false" type="StringType" value="BoatType0" factoryDefault="BoatType0" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="Boat12">
+                      <Parameters>
+                        <Parameter name="Enabled" dynamic="false" type="BoolType" value="True" factoryDefault="True" hidden="false" />
+                        <Parameter name="BoatNumber" dynamic="false" type="IntType" value="12" factoryDefault="12" hidden="false" />
+                        <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="Queue6Station" factoryDefault="Queue6Station" hidden="false" />
+                        <Parameter name="Name" dynamic="false" type="StringType" value="Boat12" factoryDefault="Boat12" hidden="false" />
+                        <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo345234623452" factoryDefault="Demo345234623452" hidden="false" />
+                        <Parameter name="Type" dynamic="false" type="StringType" value="BoatType0" factoryDefault="BoatType0" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                  </Branches>
+                </Branch>
+                <Branch name="BoatGripperTypes">
+                  <Branches>
+                    <Branch name="BoatGripperType1" />
+                  </Branches>
+                </Branch>
+              </Branches>
+            </Branch>
+          </Branches>
+        </Branch>
+        <Branch name="DivingBoards">
+          <Branches>
+            <Branch name="DivingBoardStations">
+              <Branches>
+                <Branch name="DivingBoard1Station">
+                  <Parameters>
+                    <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Left" factoryDefault="Left" hidden="false">
+                      <ValidValues>
+                        <Value>Left</Value>
+                        <Value>Right</Value>
+                      </ValidValues>
+                    </Parameter>
+                    <Parameter name="Name" dynamic="false" type="StringType" value="MappingStationLeft" factoryDefault="MappingStationLeft" hidden="false" />
+                    <Parameter name="RobotLocId" dynamic="false" type="StringType" value="S" factoryDefault="S" hidden="false" />
+                  </Parameters>
+                </Branch>
+                <Branch name="DivingBoard2Station">
+                  <Parameters>
+                    <Parameter name="MiniEnvironmentSide" dynamic="false" type="StringType" value="Right" factoryDefault="Right" hidden="false">
+                      <ValidValues>
+                        <Value>Left</Value>
+                        <Value>Right</Value>
+                      </ValidValues>
+                    </Parameter>
+                    <Parameter name="Name" dynamic="false" type="StringType" value="MappingStationRight" factoryDefault="MappingStationRight" hidden="false" />
+                    <Parameter name="RobotLocId" dynamic="false" type="StringType" value="T" factoryDefault="T" hidden="false" />
+                  </Parameters>
+                </Branch>
+              </Branches>
+            </Branch>
+            <Branch name="MappingStations">
+              <Branches>
+                <Branch name="MappingStationTypes">
+                  <Branches>
+                    <Branch name="MappingStationType0">
+                      <Parameters>
+                        <Parameter name="Description" dynamic="false" type="StringType" value="MappingStation F5.B10" factoryDefault="MappingStation F5.B10" hidden="false" />
+                        <Parameter name="LoadingPatterns" dynamic="false" type="StringType" value="BTIF5,B10-F5,B10" factoryDefault="BTIF5,B10-F5,B10" hidden="false" />
+                        <Parameter name="SlotCapacity" dynamic="false" type="IntType" value="14" factoryDefault="14" hidden="false" />
+                        <Parameter name="SlotSpacing" dynamic="false" type="StringType" value="BTIF15-F15" factoryDefault="BTIF15-F15" hidden="false" />
+                        <Parameter name="Type" description="Type of Object" dynamic="false" type="StringType" value="MSF5.B10" factoryDefault="MSF5.B10" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="MappingStationType1">
+                      <Parameters>
+                        <Parameter name="Description" dynamic="false" type="StringType" value="MappingStation FB10" factoryDefault="MappingStation FB10" hidden="false" />
+                        <Parameter name="LoadingPatterns" dynamic="false" type="StringType" value="BTIFB10-FB10" factoryDefault="BTIFB10-FB10" hidden="false" />
+                        <Parameter name="SlotCapacity" dynamic="false" type="IntType" value="13" factoryDefault="13" hidden="false" />
+                        <Parameter name="SlotSpacing" dynamic="false" type="StringType" value="BTIF10-F10" factoryDefault="BTIF10-F10" hidden="false" />
+                        <Parameter name="Type" description="Type of Object" dynamic="false" type="StringType" value="MSFB10" factoryDefault="MSFB10" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="MappingStationType3">
+                      <Parameters>
+                        <Parameter name="Description" dynamic="false" type="StringType" value="CS MappingStation F3.5,B9" factoryDefault="CS MappingStation F3.5,B9" hidden="false" />
+                        <Parameter name="LoadingPatterns" dynamic="false" type="StringType" value="CSF3.5B9-F3.5B9" factoryDefault="CSF3.5B9-F3.5B9" hidden="false" />
+                        <Parameter name="SlotCapacity" dynamic="false" type="IntType" value="13" factoryDefault="13" hidden="false" />
+                        <Parameter name="SlotSpacing" dynamic="false" type="StringType" value="CSF3.5B9-F3.5B9" factoryDefault="CSF3.5B9-F3.5B9" hidden="false" />
+                        <Parameter name="Type" description="Type of Object" dynamic="false" type="StringType" value="CSMSF3.5B9" factoryDefault="CSMSF3.5B9" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                    <Branch name="MappingStationType2">
+                      <Parameters>
+                        <Parameter name="Description" dynamic="false" type="StringType" value="CS MappingStation FB10" factoryDefault="CS MappingStation FB10" hidden="false" />
+                        <Parameter name="LoadingPatterns" dynamic="false" type="StringType" value="CSFB10-FB10" factoryDefault="CSFB10-FB10" hidden="false" />
+                        <Parameter name="SlotCapacity" dynamic="false" type="IntType" value="13" factoryDefault="13" hidden="false" />
+                        <Parameter name="SlotSpacing" dynamic="false" type="StringType" value="CSF10-F10" factoryDefault="CSF10-F10" hidden="false" />
+                        <Parameter name="Type" description="Type of Object" dynamic="false" type="StringType" value="CSMSFB10" factoryDefault="CSMSFB10" hidden="false" />
+                      </Parameters>
+                    </Branch>
+                  </Branches>
+                </Branch>
+                <Branch name="MappingStationsPresent">
+                  <Branches>
+                    <Branch name="MappingStation1">
+                      <Parameters>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="MappingStationLeft" factoryDefault="MappingStationLeft" hidden="false" />
+                        <Parameter name="Type" dynamic="false" type="StringType" value="MappingStationType0" factoryDefault="MappingStationType0" hidden="false" />
+                        <Parameter name="Enabled" dynamic="false" type="BoolType" value="True" factoryDefault="True" hidden="false" />
+                      </Parameters>
+                      <Branches>
+                        <Branch name="Nest">
+                          <Parameters>
+                            <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo00001235123123" factoryDefault="Demo00001235123123" hidden="false" />
+                            <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="MappingStationLeft.Nest" factoryDefault="MappingStationLeft.Nest" hidden="false" />
+                          </Parameters>
+                        </Branch>
+                        <Branch name="Tool">
+                          <Parameters>
+                            <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo0002134123412" factoryDefault="Demo0002134123412" hidden="false" />
+                            <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="MappingStationLeft.Tool" factoryDefault="MappingStationLeft.Tool" hidden="false" />
+                          </Parameters>
+                          <Branches />
+                        </Branch>
+                      </Branches>
+                    </Branch>
+                    <Branch name="MappingStation2">
+                      <Parameters>
+                        <Parameter name="Name" dynamic="false" type="StringType" value="MappingStationRight" factoryDefault="MappingStationRight" hidden="false" />
+                        <Parameter name="Type" dynamic="false" type="StringType" value="MappingStationType1" factoryDefault="MappingStationType1" hidden="false" />
+                        <Parameter name="Enabled" dynamic="false" type="BoolType" value="True" factoryDefault="True" hidden="false" />
+                      </Parameters>
+                      <Branches>
+                        <Branch name="Nest">
+                          <Parameters>
+                            <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo49492322323" factoryDefault="Demo49492322323" hidden="false" />
+                            <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="MappingStationRight.Nest" factoryDefault="MappingStationRight.Nest" hidden="false" />
+                          </Parameters>
+                        </Branch>
+                        <Branch name="Tool">
+                          <Parameters>
+                            <Parameter name="SerialNumber" dynamic="false" type="StringType" value="Demo3848483434" factoryDefault="Demo3848483434" hidden="false" />
+                            <Parameter name="MaterialLocation" dynamic="false" type="StringType" value="MappingStationRight.Tool" factoryDefault="MappingStationRight.Tool" hidden="false" />
+                          </Parameters>
+                        </Branch>
+                      </Branches>
+                    </Branch>
+                  </Branches>
+                </Branch>
+              </Branches>
+            </Branch>
+          </Branches>
+        </Branch>
+      </Branches>
+    </Branch>
+    <Branch name="System">
+      <Parameters>
+        <Parameter name="EquipmentName" description="The name of the equipment used as the epj file base name and CIMPortal model name" dynamic="false" classification="User" type="StringType" value="Equipment" factoryDefault="Equipment" hidden="true" />
+      </Parameters>
+      <Branches>
+        <Branch name="Users">
+          <Parameters>
+            <Parameter name="Maximum Password Expiration" description="The maximum number of days a password will be valid (0 is infinite)" dynamic="true" classification="User" type="IntType" value="0" factoryDefault="0" min="0" max="10000" hidden="false" />
+            <Parameter name="PasswordMaxLength" description="Maximum password length" dynamic="false" classification="User" type="IntType" value="40" factoryDefault="40" min="16" max="64" hidden="false" />
+            <Parameter name="PasswordMinLength" description="Minimum password length" dynamic="false" classification="User" type="IntType" value="8" factoryDefault="8" min="0" max="16" hidden="false" />
+            <Parameter name="UserNameMaxLength" description="Maximum user name length" dynamic="false" classification="User" type="IntType" value="16" factoryDefault="16" min="8" max="40" hidden="false" />
+            <Parameter name="UserNameMinLength" description="Minimum user name length" dynamic="false" classification="User" type="IntType" value="1" factoryDefault="1" min="1" max="8" hidden="false" />
+          </Parameters>
+        </Branch>
+        <Branch name="CIMPortal">
+          <Parameters>
+            <Parameter name="Password" description="CIMPortal password" dynamic="false" classification="User" type="StringType" value="ccfpwd" factoryDefault="ccfpwd" hidden="true" />
+            <Parameter name="UserName" description="CIMPortal username" dynamic="false" classification="User" type="StringType" value="ccfuser" factoryDefault="ccfuser" hidden="true" />
+          </Parameters>
+        </Branch>
+      </Branches>
+    </Branch>
+    <Branch name="GUI">
+      <Parameters>
+        <Parameter name="StatusMessageTimeout" description="Timeout in seconds for status message removal" dynamic="true" classification="User" type="IntType" value="10" factoryDefault="10" min="3" max="30" hidden="false" />
+        <Parameter name="ShowCarrierVerificationPopups" description="If true, then the carrier ID and slotmap verification dialogs will be shown.  False means use the load port system screen to verify carriers." dynamic="true" classification="User" type="BoolType" value="false" factoryDefault="false" hidden="false" />
+        <Parameter name="WaferLabelText" description="Description" dynamic="true" classification="User" type="EnumType" value="SourcePortAndSlot" factoryDefault="SourcePortAndSlot" min="0" max="1" hidden="false">
+          <ValidValues>
+            <Value>SubstrateName</Value>
+            <Value>SourcePortAndSlot</Value>
+          </ValidValues>
+        </Parameter>
+      </Parameters>
+      <Branches>
+        <Branch name="AlarmSalience">
+          <Parameters>
+            <Parameter name="FlashDuration" description="Inital period of time to flash navigation button in milliseconds" dynamic="false" classification="User" type="IntType" value="5000" factoryDefault="5000" min="100" max="30000" hidden="false" />
+            <Parameter name="FlashPeriod" description="The on and off period while flashing in milliseconds" dynamic="false" classification="User" type="IntType" value="500" factoryDefault="500" min="100" max="30000" hidden="false" />
+          </Parameters>
+        </Branch>
+        <Branch name="LocalJobControl">
+          <Parameters>
+            <Parameter name="RecipeRootNamespace" description="Root recipe namespace to display recipe names from" dynamic="true" classification="User" type="EnumType" value="Both Production and Engineering" factoryDefault="Both Production and Engineering" hidden="false">
+              <ValidValues>
+                <Value>Both Production and Engineering</Value>
+                <Value>Production only</Value>
+                <Value>Engineering only</Value>
+              </ValidValues>
+            </Parameter>
+            <Parameter name="RecipeType" description="Recipe types to display on this screen" dynamic="true" classification="User" type="EnumType" value="Sequence" factoryDefault="Sequence" hidden="false">
+              <ValidValues>
+                <Value>Sequence</Value>
+                <Value>Process</Value>
+                <Value>All</Value>
+              </ValidValues>
+            </Parameter>
+          </Parameters>
+        </Branch>
+        <Branch name="CreatePJControl">
+          <Parameters>
+            <Parameter name="RecipeRootNamespace" description="Root recipe namespace to display recipe names from" dynamic="true" classification="User" type="EnumType" value="Both Production and Engineering" factoryDefault="Both Production and Engineering" hidden="false">
+              <ValidValues>
+                <Value>Both Production and Engineering</Value>
+                <Value>Production only</Value>
+                <Value>Engineering only</Value>
+              </ValidValues>
+            </Parameter>
+            <Parameter name="RecipeType" description="Recipe types to display on this screen" dynamic="true" classification="User" type="EnumType" value="All" factoryDefault="All" hidden="false">
+              <ValidValues>
+                <Value>Sequence</Value>
+                <Value>Process</Value>
+                <Value>All</Value>
+              </ValidValues>
+            </Parameter>
+          </Parameters>
+        </Branch>
+        <Branch name="AutoLogin">
+          <Parameters>
+            <Parameter name="User" description="User to use during AutoLogin.  Blank value disables AutoLogin." dynamic="true" classification="User" type="StringType" value="sysadmin" visibility="Administrator" settability="Administrator" hidden="false" />
+            <Parameter name="Password" description="Password to use during AutoLogin.  Blank value disables AutoLogin." dynamic="true" classification="User" type="StringType" value="sysadmin" visibility="Administrator" settability="Administrator" hidden="false" />
+          </Parameters>
+        </Branch>
+        <Branch name="TestParameters">
+          <Branches>
+            <Branch name="TestDoubles">
+              <Parameters>
+                <Parameter name="NoMinNoMax" dynamic="true" classification="User" type="DoubleType" value="5.00" factoryDefault="5.00" hidden="false" />
+                <Parameter name="HasMinNoMax" dynamic="true" classification="User" type="DoubleType" value="5.00" factoryDefault="5.00" min="0.00" hidden="false" />
+                <Parameter name="NoMinHasMax" dynamic="true" classification="User" type="DoubleType" value="5.00" factoryDefault="5.00" max="10.00" hidden="false" />
+                <Parameter name="HasMinHasMax" dynamic="true" classification="User" type="DoubleType" value="5.00" factoryDefault="5.00" min="0.00" max="10.00" hidden="false" />
+              </Parameters>
+            </Branch>
+            <Branch name="TestIntegers">
+              <Parameters>
+                <Parameter name="NoMinNoMax" dynamic="true" classification="User" type="IntType" value="5" factoryDefault="5" hidden="false" />
+                <Parameter name="HasMinNoMax" dynamic="true" classification="User" type="IntType" value="5" factoryDefault="5" min="0" hidden="false" />
+                <Parameter name="NoMinHasMax" dynamic="true" classification="User" type="IntType" value="5" factoryDefault="5" max="10" hidden="false" />
+                <Parameter name="HasMinHasMax" dynamic="true" classification="User" type="IntType" value="5" factoryDefault="5" min="0" max="10" hidden="false" />
+              </Parameters>
+            </Branch>
+          </Branches>
+        </Branch>
+      </Branches>
+    </Branch>
+    <Branch name="ToolSupervisor">
+      <Parameters>
+        <Parameter name="UsingRealHardware" description="If true, defines that real tool (Tool Controller) hardware will be used" dynamic="false" classification="User" type="BoolType" value="false" factoryDefault="true" hidden="true" />
+        <Parameter name="SimulatedProcessTimeInSeconds" description="Simulated processing time (in seconds) for each processing chamber (used for simulation only)" dynamic="false" classification="User" type="IntType" value="12" factoryDefault="12" min="1" max="500" hidden="false" />
+        <Parameter name="DataPublicationIntervalMsec" description="Timer interval (in milliseconds) to send data to Factory Automation" dynamic="false" classification="User" type="IntType" value="10" factoryDefault="10" min="10" max="1000" hidden="false" />
+        <Parameter name="MaxDataQueueSize" description="Maximum size of the data queue before entries are thrown out" dynamic="false" classification="User" type="IntType" value="1000" factoryDefault="1000" min="100" max="5000" hidden="false" />
+      </Parameters>
+      <Branches>
+        <Branch name="Recipes">
+          <Parameters>
+            <Parameter name="UseRecipeArchive" description="If true, archive recipes.  If false, do not archive recipes." dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+          </Parameters>
+        </Branch>
+        <Branch name="LogFileArchive">
+          <Parameters>
+            <Parameter name="FullSizeInMB" description="The size in MB log files are allowed before triggering full alarm (0 to disable)" dynamic="false" classification="User" type="IntType" value="1000" factoryDefault="1000" min="0" max="10000" hidden="false" />
+            <Parameter name="WarningSizeInMB" description="The size in MB log files are allowed before triggering warning alarm (0 to disable)" dynamic="false" classification="User" type="IntType" value="900" factoryDefault="900" min="0" max="10000" hidden="false" />
+          </Parameters>
+        </Branch>
+      </Branches>
+    </Branch>
+    <Branch name="HostInterface">
+      <Branches>
+        <Branch name="1">
+          <Parameters>
+            <Parameter name="ActiveMode" description="If TRUE, then the equipment will actively try to connect to the host using ActiveModeHostIPAddress and ActiveModeHostPortNumber" dynamic="true" classification="User" type="BoolType" value="false" factoryDefault="false" hidden="false" />
+            <Parameter name="ActiveModeHostIPAddress" description="The IP address of the GEM host" dynamic="true" classification="User" type="StringType" value="" factoryDefault="" hidden="false" />
+            <Parameter name="ActiveModeHostPortNumber" description="The TCP port for the GEM Host" dynamic="true" classification="User" type="IntType" value="0" factoryDefault="0" min="0" max="66000" hidden="false" />
+            <Parameter name="DeviceId" description="The device-id identifies the equipment and will be assigned by the factory. Common device-ids are 0 and 32767." dynamic="true" classification="User" type="IntType" value="32767" factoryDefault="32767" min="0" max="32767" hidden="false" />
+            <Parameter name="LinktestTimerInMsec" description="HSMS LINKTEST.REQ heartbeat message timer" dynamic="true" classification="User" type="IntType" value="60000" factoryDefault="60000" min="1000" max="240000" hidden="false" />
+            <Parameter name="PassiveModeIPAddress" description="The IP address of the NIC to use for GEM Host connections." dynamic="true" classification="User" type="StringType" value="0.0.0.0" factoryDefault="0.0.0.0" hidden="false" />
+            <Parameter name="PassiveModePortNumber" description="The TCP port number on which  to listen for host connections." dynamic="true" classification="User" type="IntType" value="5000" factoryDefault="5000" min="0" max="66000" hidden="false" />
+            <Parameter name="T3TimeoutInMsec" description="Transaction Timer" dynamic="true" classification="User" type="IntType" value="45000" factoryDefault="45000" min="1000" max="120000" hidden="false" />
+            <Parameter name="T5TimeoutInMsec" description="Connect separation timeout" dynamic="true" classification="User" type="IntType" value="5000" factoryDefault="5000" min="1000" max="240000" hidden="false" />
+            <Parameter name="T6TimeoutInMsec" description="Control transaction timeout" dynamic="true" classification="User" type="IntType" value="5000" factoryDefault="5000" min="1000" max="240000" hidden="false" />
+            <Parameter name="T7TimeoutInMsec" description="NOT SELECTED timeout" dynamic="true" classification="User" type="IntType" value="10000" factoryDefault="10000" min="1000" max="240000" hidden="false" />
+            <Parameter name="T8TimeoutInMsec" description="Network inter-character timeout" dynamic="true" classification="User" type="IntType" value="5000" factoryDefault="5000" min="1000" max="120000" hidden="false" />
+          </Parameters>
+        </Branch>
+        <Branch name="2">
+          <Parameters>
+            <Parameter name="ActiveMode" description="If TRUE, then the equipment will actively try to connect to the host using ActiveModeHostIPAddress and ActiveModeHostPortNumber" dynamic="true" classification="User" type="BoolType" value="false" factoryDefault="false" hidden="false" />
+            <Parameter name="ActiveModeHostIPAddress" description="The IP address of the GEM host" dynamic="true" classification="User" type="StringType" value="" factoryDefault="" hidden="false" />
+            <Parameter name="ActiveModeHostPortNumber" description="The TCP port for the GEM Host" dynamic="true" classification="User" type="IntType" value="0" factoryDefault="0" min="0" max="66000" hidden="false" />
+            <Parameter name="DeviceId" description="The device-id identifies the equipment and will be assigned by the factory. Common device-ids are 0 and 32767." dynamic="true" classification="User" type="IntType" value="32767" factoryDefault="32767" min="0" max="32767" hidden="false" />
+            <Parameter name="LinktestTimerInMsec" description="HSMS LINKTEST.REQ heartbeat message timer" dynamic="true" classification="User" type="IntType" value="60000" factoryDefault="60000" min="1000" max="240000" hidden="false" />
+            <Parameter name="PassiveModeIPAddress" description="The IP address of the NIC to use for GEM Host connections." dynamic="true" classification="User" type="StringType" value="0.0.0.0" factoryDefault="0.0.0.0" hidden="false" />
+            <Parameter name="PassiveModePortNumber" description="The TCP port number on which  to listen for host connections." dynamic="true" classification="User" type="IntType" value="5001" factoryDefault="5001" min="0" max="66000" hidden="false" />
+            <Parameter name="T3TimeoutInMsec" description="Transaction Timer" dynamic="true" classification="User" type="IntType" value="45000" factoryDefault="45000" min="1000" max="120000" hidden="false" />
+            <Parameter name="T5TimeoutInMsec" description="Connect separation timeout" dynamic="true" classification="User" type="IntType" value="5000" factoryDefault="5000" min="1000" max="240000" hidden="false" />
+            <Parameter name="T6TimeoutInMsec" description="Control transaction timeout" dynamic="true" classification="User" type="IntType" value="5000" factoryDefault="5000" min="1000" max="240000" hidden="false" />
+            <Parameter name="T7TimeoutInMsec" description="NOT SELECTED timeout" dynamic="true" classification="User" type="IntType" value="10000" factoryDefault="10000" min="1000" max="240000" hidden="false" />
+            <Parameter name="T8TimeoutInMsec" description="Network inter-character timeout" dynamic="true" classification="User" type="IntType" value="5000" factoryDefault="5000" min="1000" max="120000" hidden="false" />
+          </Parameters>
+        </Branch>
+      </Branches>
+    </Branch>
+    <Branch name="OIServer">
+      <Parameters>
+        <Parameter name="OIClockUpdateInterval" description="Interval (in seconds) at which the clocks are synchronized" dynamic="false" classification="User" type="IntType" value="1" factoryDefault="1" min="1" max="30" hidden="false" />
+        <Parameter name="OIPublishUTCTime" description="If true, then use Coordinated Universal Time standard.  Otherwise, use local pc time." dynamic="false" classification="User" type="BoolType" value="false" factoryDefault="false" hidden="false" />
+        <Parameter name="SubnetIPAddress" description="IP Address of the equipment subnet.  OperatorInterfaces on this subnet may be granted control of the equipment. A value of 255.255.255.255 restricts control to OIServer computer." dynamic="false" classification="User" type="StringType" value="255.255.255.255" factoryDefault="255.255.255.255" hidden="true" />
+        <Parameter name="SubnetMask" description="IP Address mask of the equipment subnet.  OperatorInterfaces on this subnet may be granted control of the equipment. A value of 0.0.0.0 allows all computers to have control." dynamic="false" classification="User" type="StringType" value="255.255.255.255" factoryDefault="255.255.255.255" hidden="true" />
+      </Parameters>
+      <Branches>
+        <Branch name="TerminalServices">
+          <Parameters>
+            <Parameter name="0" description="IP address of the GUI that can receive terminal messages from Factory Automation Host" dynamic="true" classification="User" type="StringType" value="localhost" factoryDefault="" hidden="true" />
+            <Parameter name="1" description="IP address of the GUI that can receive terminal messages from Factory Automation Host" dynamic="true" classification="User" type="StringType" value="" factoryDefault="" hidden="true" />
+            <Parameter name="2" description="IP address of the GUI that can receive terminal messages from Factory Automation Host" dynamic="true" classification="User" type="StringType" value="" factoryDefault="" hidden="true" />
+          </Parameters>
+        </Branch>
+      </Branches>
+    </Branch>
+    <Branch name="FactoryAutomation">
+      <Parameters>
+        <Parameter name="MDLNValue" description="GEM Equipment Model Type" dynamic="false" classification="User" type="StringType" value="Equipment" factoryDefault="Equipment" hidden="true" />
+        <Parameter name="HostCanAccessEngineeringRecipes" description="Determines if the GEM host can access recipes in the Engineering folder" dynamic="false" type="BoolType" value="false" factoryDefault="false" hidden="false" />
+        <Parameter name="InitialGemOnlineSwitchState" description="The GEM host initial control state." dynamic="false" type="EnumType" value="Offline" factoryDefault="Offline" hidden="false">
+          <ValidValues>
+            <Value>Online</Value>
+            <Value>Offline</Value>
+          </ValidValues>
+        </Parameter>
+        <Parameter name="InitialGemRemoteSwitchState" description="The GEM host initial control remote state." dynamic="false" type="EnumType" value="Local" factoryDefault="Local" hidden="false">
+          <ValidValues>
+            <Value>Local</Value>
+            <Value>Remote</Value>
+          </ValidValues>
+        </Parameter>
+        <Parameter name="InitialGemCommunicationState" description="The initial GEM host communications state." dynamic="false" type="EnumType" value="Enabled" factoryDefault="Enabled" hidden="false">
+          <ValidValues>
+            <Value>Disabled</Value>
+            <Value>Enabled</Value>
+          </ValidValues>
+        </Parameter>
+        <Parameter name="SetAlarmsWhenNotReadyForJobs" description="Set Alarms in GEM host even when not ready for jobs" dynamic="true" type="BoolType" value="false" factoryDefault="false" hidden="false" />
+        <Parameter name="ProcessJobMaterialType" description="Controls the process job material type that FA creates.  Does not affect the material type of process jobs the host creates." dynamic="true" type="EnumType" value="Carrier" factoryDefault="Carrier" hidden="false">
+          <ValidValues>
+            <Value>Carrier</Value>
+            <Value>Substrate</Value>
+          </ValidValues>
+        </Parameter>
+        <Parameter name="SOFTREVValue" dynamic="false" type="StringType" value="0.1" factoryDefault="0.1" hidden="true" />
+      </Parameters>
+      <Branches>
+        <Branch name="LightTowerConditions">
+          <Parameters>
+            <Parameter name="On" description="SET" dynamic="false" classification="User" type="StringType" value="true" factoryDefault="true" hidden="true" />
+            <Parameter name="Off" description="not SET" dynamic="false" classification="User" type="StringType" value="false" factoryDefault="false" hidden="true" />
+            <Parameter name="OnlineRemote" description="SET if the GEM Control State is Online-Remote" dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;GemControlState&quot;) == 5" factoryDefault="GetParameterValue(&quot;GemControlState&quot;) == 5" hidden="true" />
+            <Parameter name="OnlineLocal" description="SET if the GEM Control State is Online-Local" dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;GemControlState&quot;) == 4" factoryDefault="GetParameterValue(&quot;GemControlState&quot;) == 4" hidden="true" />
+            <Parameter name="Offline" description="SET if the GEM Control State is Offline" dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;GemControlState&quot;) &lt; 4" factoryDefault="GetParameterValue(&quot;GemControlState&quot;) &lt; 4" hidden="true" />
+            <Parameter name="AlarmsSet" description="SET if there is at least one alarm that is SET" dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;NumActiveAlarms&quot;) &gt; 0" factoryDefault="GetParameterValue(&quot;NumActiveAlarms&quot;) &gt; 0" hidden="true" />
+            <Parameter name="NoAlarmsSet" description="SET if there are zero alarms set" dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;NumActiveAlarms&quot;) == 0" factoryDefault="GetParameterValue(&quot;NumActiveAlarms&quot;) == 0" hidden="true" />
+            <Parameter name="AlarmAttention" description="SET if there is an alarm that has recovery actions enabled for the operator to select." dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;NumRecoverableAlarms&quot;) &gt; 0" factoryDefault="GetParameterValue(&quot;NumRecoverableAlarms&quot;) &gt; 0" hidden="true" />
+            <Parameter name="Communicating" description="SET if the GEM Communication State is Communicating" dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;GemCommunicationState&quot;) == 260" factoryDefault="GetParameterValue(&quot;GemCommunicationState&quot;) == 260" hidden="true" />
+            <Parameter name="NotCommunicating" description="SET if the GEM Communication State is Not Communicating" dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;GemCommunicationState&quot;) != 260" factoryDefault="GetParameterValue(&quot;GemCommunicationState&quot;) != 260" hidden="true" />
+            <Parameter name="Idle" description="SET if the GEM Processing State is Idle" dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;GemProcessingState&quot;) == 1" factoryDefault="GetParameterValue(&quot;GemProcessingState&quot;) == 1" hidden="true" />
+            <Parameter name="Init" description="SET if the GEM Processing State is Initializing" dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;GemProcessingState&quot;) == 0" factoryDefault="GetParameterValue(&quot;GemProcessingState&quot;) == 0" hidden="true" />
+            <Parameter name="SettingUp" description="SET if the GEM Processing State is Setting Up" dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;GemProcessingState&quot;) == 2" factoryDefault="GetParameterValue(&quot;GemProcessingState&quot;) == 2" hidden="true" />
+            <Parameter name="Executing" description="SET if the GEM Processing State is Executing" dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;GemProcessingState&quot;) == 4" factoryDefault="GetParameterValue(&quot;GemProcessingState&quot;) == 4" hidden="true" />
+            <Parameter name="Paused" description="SET if the GEM Processing State is Paused" dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;GemProcessingState&quot;) == 5" factoryDefault="GetParameterValue(&quot;GemProcessingState&quot;) == 5" hidden="true" />
+            <Parameter name="Manual" description="SET if the GEM Processing State is Manual" dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;GemProcessingState&quot;) == 6" factoryDefault="GetParameterValue(&quot;GemProcessingState&quot;) == 6" hidden="true" />
+            <Parameter name="Ready" description="SET if the GEM Processing State is Ready" dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;GemProcessingState&quot;) == 3" factoryDefault="GetParameterValue(&quot;GemProcessingState&quot;) == 3" hidden="true" />
+            <Parameter name="PortsReadyToLoad" description="SET if at least one load port has a transfer state value of Ready To Load." dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;NumLPsReadyToLoad&quot;) &gt; 0" factoryDefault="GetParameterValue(&quot;NumLPsReadyToLoad&quot;) &gt; 0" hidden="true" />
+            <Parameter name="PortsReadyToUnload" description="SET if at least one load port has a transfer state value of Ready To Unload." dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;NumLPsReadyToUnload&quot;) &gt; 0" factoryDefault="GetParameterValue(&quot;NumLPsReadyToUnload&quot;) &gt; 0" hidden="true" />
+            <Parameter name="AllPortsBlocked" description="SET if there are no load ports with transfer state values of Ready To Load or Ready To Unload." dynamic="false" classification="User" type="StringType" value="GetParameterValue(&quot;NumLPsReadyToUnload&quot;) == 0 &amp;&amp; GetParameterValue(&quot;NumLPsReadyToLoad&quot;) == 0" factoryDefault="GetParameterValue(&quot;NumLPsReadyToUnload&quot;) == 0 &amp;&amp; GetParameterValue(&quot;NumLPsReadyToLoad&quot;) == 0" hidden="true" />
+          </Parameters>
+        </Branch>
+        <Branch name="LoadPorts">
+          <Parameters>
+            <Parameter name="E84TP1Timeout" description="E84 TP1 Timeout in seconds" dynamic="true" classification="User" type="IntType" value="5" factoryDefault="5" min="1" max="999" hidden="false" />
+            <Parameter name="E84TP2Timeout" description="E84 TP2 Timeout in seconds" dynamic="true" classification="User" type="IntType" value="5" factoryDefault="5" min="1" max="999" hidden="false" />
+            <Parameter name="E84TP3Timeout" description="E84 TP3 Timeout in seconds" dynamic="true" classification="User" type="IntType" value="60" factoryDefault="60" min="1" max="999" hidden="false" />
+            <Parameter name="E84TP4Timeout" description="E84 TP4 Timeout in seconds" dynamic="true" classification="User" type="IntType" value="60" factoryDefault="60" min="1" max="999" hidden="false" />
+            <Parameter name="E84TP5Timeout" description="E84 TP5 Timeout in seconds" dynamic="true" classification="User" type="IntType" value="5" factoryDefault="5" min="1" max="999" hidden="false" />
+            <Parameter name="AutoClamp" description="Used to automatically clamp the FOUP at the load port and advance the carrier to the first stage of verification without user interaction." dynamic="true" classification="User" type="BoolType" value="false" factoryDefault="false" hidden="false" />
+            <Parameter name="AutoClampDelay" description="Time in seconds between carrier placement and automatic clamping" dynamic="true" classification="User" type="IntType" value="5" factoryDefault="5" min="0" max="100" hidden="false" />
+            <Parameter name="SingleButtonManualTransfer" description="True = single button transfer, False = two button transfer" dynamic="true" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+            <Parameter name="AutoProceedWithCarrier" description="Used to advance the carrier through the verification process without user interaction" dynamic="true" classification="User" type="BoolType" value="false" factoryDefault="false" hidden="false" />
+            <Parameter name="LP1IDReaderAvailable" description="ID reader is enabled for the load port" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+            <Parameter name="LP2IDReaderAvailable" description="ID reader is enabled for the load port" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+            <Parameter name="LP3IDReaderAvailable" description="ID reader is enabled for the load port" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+            <Parameter name="LP4IDReaderAvailable" description="ID reader is enabled for the load port" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+            <Parameter name="PlacementTimeout" description="time in seconds between present and placed signals before triggering an alarm" dynamic="true" classification="User" type="IntType" value="5" factoryDefault="5" min="1" max="10" hidden="false" />
+            <Parameter name="E84Version" description="1 is default 2 is light curtain" dynamic="false" type="IntType" value="1" factoryDefault="1" min="1" max="2" hidden="false" />
+            <Parameter name="E84DebounceTime" description="Time in milliseconds used to debounce E84 signals" dynamic="false" type="IntType" value="200" factoryDefault="200" min="100" max="500" hidden="false" />
+            <Parameter name="E84TP6Timeout" description="E84 TP6 Timeout in seconds" dynamic="true" classification="User" type="IntType" value="5" factoryDefault="5" min="1" max="999" hidden="false" />
+            <Parameter name="E84TD1Timeout" description="E84 TD1 Timeout in seconds, TD1 must be less than TP6" dynamic="true" classification="User" type="IntType" value="1" factoryDefault="1" min="1" max="999" hidden="false" />
+            <Parameter name="LP101IDReaderAvailable" description="ID reader is enabled for the load port" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+            <Parameter name="LP102IDReaderAvailable" description="ID reader is enabled for the load port" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+            <Parameter name="LP103IDReaderAvailable" description="ID reader is enabled for the load port" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+            <Parameter name="LP104IDReaderAvailable" description="ID reader is enabled for the load port" dynamic="false" classification="User" type="BoolType" value="true" factoryDefault="true" hidden="false" />
+          </Parameters>
+        </Branch>
+        <Branch name="DataPublication">
+          <Parameters>
+            <Parameter name="GemSubsampleInterval" description="Timer interval (in milliseconds) to send data to CIMConnect" dynamic="true" classification="User" type="IntType" value="100" factoryDefault="100" min="100" max="10000" hidden="false" />
+            <Parameter name="CIMPortalFullModelFilename" description="CIMPortal full model filename, relative to the FactoryAutomationServer.dll directory.  The dynamically created model is added to the static model to create the full model." dynamic="true" classification="User" type="StringType" value=".\FullEquipment.xml" factoryDefault=".\FullEquipment.xml" hidden="true" />
+          </Parameters>
+        </Branch>
+        <Branch name="RecipeVariables">
+          <Parameters>
+            <Parameter name="Alignment Angle" description="Alignment angle for wafers being processed.  This parameter is only evaluated if AlignWafers is true." dynamic="true" classification="User" type="DoubleType" value="0" factoryDefault="0" min="-359.0" max="359.0" hidden="true" />
+            <Parameter name="Align Wafers" description="Align wafers during processing" dynamic="true" classification="User" type="BoolType" value="false" factoryDefault="false" hidden="true">
+              <ValidValues>
+                <Value>true</Value>
+                <Value>false</Value>
+              </ValidValues>
+            </Parameter>
+          </Parameters>
+        </Branch>
+      </Branches>
+    </Branch>
+    <Branch name="Scheduler">
+      <Parameters>
+        <Parameter name="DeadlockTimeoutInSeconds" description="The deadlock timeout in seconds.  Deadlock alarm is posted if there are no tasks for this amount of time." dynamic="false" classification="Software" type="IntType" value="60" factoryDefault="60" min="1" max="3600" hidden="false" />
+        <Parameter name="UnstartedSubstrateLimit" description="New control jobs are started when the scheduler has fewer than this number of unstarted substrates" dynamic="false" classification="Software" type="IntType" value="2" factoryDefault="2" min="1" max="25" hidden="false" />
+        <Parameter name="VacuumRobotWaferHandlingCounterThreshold" description="The number of places and swaps the VTM robot can do between home commands.  A value of 0 disables automatic re-homing." dynamic="true" classification="Software" type="IntType" value="0" factoryDefault="0" min="0" max="1000000000" hidden="false" />
+        <Parameter name="VtmWaferTransferPressure" description="Pressure regime at which wafer transfers involving the vacuum robot shall occur.  A change to this setting shall take effect when the scheduler operating mode is changed to Job mode or at the beginning of a new manual material movement operation." dynamic="true" classification="Hardware" type="EnumType" value="Vacuum" factoryDefault="Vacuum" hidden="false">
+          <ValidValues>
+            <Value>Vacuum</Value>
+            <Value>Atmosphere</Value>
+          </ValidValues>
+        </Parameter>
+      </Parameters>
+    </Branch>
+    <Branch name="Alarms">
+      <Parameters>
+        <Parameter name="Clear Managed Alarms Automatically" description="Whether or not to clear managed alarms automatically" dynamic="true" classification="User" type="BoolType" value="false" factoryDefault="false" hidden="false" />
+        <Parameter name="Clear Notification Alarms Automatically Interval" description="Interval at which notification alarms are cleared" dynamic="true" classification="User" type="StringType" value="00:00:00" factoryDefault="00:00:00" hidden="false" />
+        <Parameter name="HeartbeatInterval" description="The time interval at which the AlarmServer and AlarmClients verify the connection is valid" dynamic="true" classification="System" type="StringType" value="00:00:10" factoryDefault="00:00:10" hidden="false" />
+      </Parameters>
+    </Branch>
+    <Branch name="MonitorManager">
+      <Parameters>
+        <Parameter name="TraceInterval" description="Interval in seconds at which the status variables are integrated" dynamic="false" classification="User" type="IntType" value="5" factoryDefault="5" min="1" max="10000" hidden="false" />
+        <Parameter name="ValueSaveInterval" description="Interval in seconds at which the monitor object values are saved to file." dynamic="false" classification="User" type="IntType" value="60" factoryDefault="60" min="1" max="10000" hidden="false" />
+      </Parameters>
+    </Branch>
+  </Branches>
+</configuration>
