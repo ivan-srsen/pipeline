@@ -27,11 +27,6 @@ steps:
     feedsToUse: config
     nugetConfigPath: '$(nugetConfigFile)'
 
-- task: ChocolateyCommand@0
-  inputs:
-    command: 'install'
-    installPackageId: 'wixtoolset'
-
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
@@ -41,6 +36,12 @@ steps:
 - task: BatchScript@1
   inputs:
     filename: 'Test.bat'
+  
+- task: MSBuild@1
+  inputs:
+    solution: 'ConsoleApp.Installer\ConsoleApp.Installer.wixproj'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
 
 - publish: $(System.DefaultWorkingDirectory)
   artifact: WebApp
