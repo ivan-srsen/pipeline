@@ -40,7 +40,7 @@ steps:
 - task: MSBuild@1
   inputs:
     solution: 'ConsoleApp.Installer\ConsoleApp.Installer.wixproj'
-    platform: '$(buildPlatform)'
+    platform: 'x86'
     configuration: 'Debug'
 
 - publish: $(System.DefaultWorkingDirectory)
