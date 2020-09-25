@@ -41,7 +41,7 @@ steps:
   inputs:
     solution: 'ConsoleApp.Installer\ConsoleApp.Installer.wixproj'
     platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    configuration: 'Debug'
 
 - publish: $(System.DefaultWorkingDirectory)
   artifact: WebApp
