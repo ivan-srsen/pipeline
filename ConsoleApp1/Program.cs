@@ -9,6 +9,7 @@ namespace ConsoleApp1
         {
             var test = new Class2{Test = "sadsdada"};
             JsonConvert.SerializeObject(test);
+            var t = 1;
             Class1.Print();
         }
     }
