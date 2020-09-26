@@ -48,9 +48,11 @@ steps:
     gitHubConnection: 'github.com_ivan-srsen'
     repositoryName: 'ivan-srsen/pipeline'
     action: 'create'
-    target: '$(Build.SourceVersion)\ConsoleApp.Installer\bin\Debug\en-us\ConsoleApp.Installer.msi'
+    target: '$(Build.SourceVersion)'
     tagSource: 'userSpecifiedTag'
     tag: 'v'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
 
 - publish: $(System.DefaultWorkingDirectory)
   artifact: WebApp
