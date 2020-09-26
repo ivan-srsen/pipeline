@@ -49,7 +49,8 @@ steps:
     repositoryName: 'ivan-srsen/pipeline'
     action: 'create'
     target: '$(Build.SourceVersion)'
-    tagSource: 'gitTag'
+    tagSource: 'userSpecifiedTag'
+    tag: 'v'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
 
