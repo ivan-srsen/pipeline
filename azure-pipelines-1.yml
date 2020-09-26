@@ -51,8 +51,6 @@ steps:
     target: '$(Build.SourceVersion)\ConsoleApp.Installer\bin\Debug\en-us\ConsoleApp.Installer.msi'
     tagSource: 'userSpecifiedTag'
     tag: 'v1'
-    changeLogCompareToRelease: 'lastFullRelease'
-    changeLogType: 'commitBased'
 
 - publish: $(System.DefaultWorkingDirectory)
   artifact: WebApp
