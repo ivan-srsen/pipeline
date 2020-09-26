@@ -43,6 +43,15 @@ steps:
     platform: 'x86'
     configuration: 'Debug'
 
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'ivan-srsen'
+    repositoryName: 'pipeline'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'gitTag'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
+
 - publish: $(System.DefaultWorkingDirectory)
   artifact: WebApp
 
