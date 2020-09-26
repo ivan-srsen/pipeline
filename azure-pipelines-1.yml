@@ -48,9 +48,9 @@ steps:
     gitHubConnection: 'github.com_ivan-srsen'
     repositoryName: 'ivan-srsen/pipeline'
     action: 'create'
-    target: '$(Build.SourceVersion)'
+    target: '$(Build.SourceVersion)\ConsoleApp.Installer\bin\Debug\en-us\ConsoleApp.Installer.msi'
     tagSource: 'userSpecifiedTag'
-    tag: 'v'
+    tag: 'v1'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
 
