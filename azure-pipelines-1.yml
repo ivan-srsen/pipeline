@@ -49,9 +49,9 @@ steps:
     repositoryName: 'ivan-srsen/pipeline'
     action: 'create'
     target: '$(Build.SourceVersion)'
-    assets: '$(Build.ArtifactStagingDirectory)/ConsoleApp.Installer/bin/Debug/en-us/ConsoleApp.Installer.msi'
+    assets: '$(Build.ArtifactStagingDirectory)/*.msi'
     tagSource: 'userSpecifiedTag'
-    tag: 'v2'
+    tag: 'v3'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
 
