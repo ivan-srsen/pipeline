@@ -52,7 +52,7 @@ steps:
     target: '$(Build.SourceVersion)'
     assets: '$(Build.SourcesDirectory)/ConsoleApp.Installer/bin/Debug/en-us/ConsoleApp.Installer.msi'
     tagSource: 'userSpecifiedTag'
-    tag: '$(mydate)'
+    tag: 'v100'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
 
