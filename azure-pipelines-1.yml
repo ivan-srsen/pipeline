@@ -14,6 +14,7 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Debug'
   nugetConfigFile: '$(Build.SourcesDirectory)/nuget.config'
+  mydate: $(Get-Date -Format yyyyMMddhhmm)
 
 steps:
 - checkout: self
@@ -51,7 +52,7 @@ steps:
     target: '$(Build.SourceVersion)'
     assets: '$(Build.SourcesDirectory)/ConsoleApp.Installer/bin/Debug/en-us/ConsoleApp.Installer.msi'
     tagSource: 'userSpecifiedTag'
-    tag: 'v4'
+    tag: '$(mydate)'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
 
